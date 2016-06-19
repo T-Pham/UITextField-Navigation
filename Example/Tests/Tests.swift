@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import UITextField-Navigation
+import UITextField_Navigation
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
