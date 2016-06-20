@@ -10,9 +10,9 @@ import UIKit
 import UITextField_Navigation
 
 class ViewController: UIViewController {
-    @IBOutlet weak var textFieldIB1: UITextField!
-    @IBOutlet weak var textFieldIB2: UITextField!
-    @IBOutlet weak var textFieldIB3: UITextField!
+    @IBOutlet var textFieldIB1: UITextField!
+    @IBOutlet var textFieldIB2: UITextField!
+    @IBOutlet var textFieldIB3: UITextField!
     var textFieldCode1: UITextField!
     var textFieldCode2: UITextField!
     var textFieldCode3: UITextField!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         textFieldCode2.nextTextField = textFieldCode3
     }
 
-    private func createRightTextField(placeholder: String, leftTextField: UITextField) -> UITextField {
+    func createRightTextField(placeholder: String, leftTextField: UITextField) -> UITextField {
         let textField = UITextField()
         textField.borderStyle = .RoundedRect
         textField.font = textFieldIB1.font

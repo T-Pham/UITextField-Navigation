@@ -13,7 +13,7 @@ public extension UITextField {
 
     @IBOutlet weak public var nextTextField: UITextField? {
         get {
-            return objc_getAssociatedObject(self, &NextTextFieldKey) as! UITextField?
+            return objc_getAssociatedObject(self, &NextTextFieldKey) as? UITextField
         }
 
         set {
@@ -22,7 +22,7 @@ public extension UITextField {
             }
 
             objc_setAssociatedObject(self, &NextTextFieldKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            setSetInputAccessoryView()
+            assignInputAccessoryView()
 
             if let newTextField = newValue {
                 newTextField.previousTextField = self
@@ -30,18 +30,18 @@ public extension UITextField {
         }
     }
 
-    weak private var previousTextField: UITextField? {
+    weak public internal(set) var previousTextField: UITextField? {
         get {
-            return objc_getAssociatedObject(self, &PreviousTextFieldKey) as! UITextField?
+            return objc_getAssociatedObject(self, &PreviousTextFieldKey) as? UITextField
         }
 
         set {
             objc_setAssociatedObject(self, &PreviousTextFieldKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            setSetInputAccessoryView()
+            assignInputAccessoryView()
         }
     }
 
-    private func setSetInputAccessoryView() {
+    func assignInputAccessoryView() {
         let previousButton = UIBarButtonItem(title: "❬", style: .Plain, target: previousTextField, action: #selector(becomeFirstResponder))
         previousButton.enabled = previousTextField != nil
 
