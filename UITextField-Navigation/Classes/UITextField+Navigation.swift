@@ -13,7 +13,7 @@ public extension UITextField {
 
     @IBOutlet weak public var nextTextField: UITextField? {
         get {
-            return objc_getAssociatedObject(self, &NextTextFieldKey) as? UITextField
+            return (objc_getAssociatedObject(self, &NextTextFieldKey) as? WeakObjectContainer)?.object as? UITextField
         }
 
         set {
@@ -21,7 +21,7 @@ public extension UITextField {
                 oldTextField.previousTextField = nil
             }
 
-            objc_setAssociatedObject(self, &NextTextFieldKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &NextTextFieldKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             assignInputAccessoryView()
 
             if let newTextField = newValue {
@@ -32,11 +32,11 @@ public extension UITextField {
 
     weak public internal(set) var previousTextField: UITextField? {
         get {
-            return objc_getAssociatedObject(self, &PreviousTextFieldKey) as? UITextField
+            return (objc_getAssociatedObject(self, &PreviousTextFieldKey) as? WeakObjectContainer)?.object as? UITextField
         }
 
         set {
-            objc_setAssociatedObject(self, &PreviousTextFieldKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &PreviousTextFieldKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             assignInputAccessoryView()
         }
     }
@@ -54,5 +54,13 @@ public extension UITextField {
         toolBar.items = [previousButton, nextButton, flexibleSpace, doneButton]
         toolBar.sizeToFit()
         inputAccessoryView = toolBar
+    }
+}
+
+class WeakObjectContainer {
+    weak var object: AnyObject?
+
+    init(object anObject: AnyObject?) {
+        object = anObject
     }
 }
