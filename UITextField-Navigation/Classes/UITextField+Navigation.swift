@@ -11,7 +11,7 @@ var PreviousTextFieldKey: Int8 = 0
 
 public extension UITextField {
 
-    @IBOutlet weak public var nextTextField: UITextField? {
+    @IBOutlet weak var nextTextField: UITextField? {
         get {
             return (objc_getAssociatedObject(self, &NextTextFieldKey) as? WeakObjectContainer)?.object as? UITextField
         }
@@ -24,7 +24,7 @@ public extension UITextField {
         }
     }
 
-    weak public internal(set) var previousTextField: UITextField? {
+    weak internal(set) var previousTextField: UITextField? {
         get {
             return (objc_getAssociatedObject(self, &PreviousTextFieldKey) as? WeakObjectContainer)?.object as? UITextField
         }
