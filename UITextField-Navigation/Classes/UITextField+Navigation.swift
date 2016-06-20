@@ -19,7 +19,7 @@ public extension UITextField {
         set {
             nextTextField?.previousTextField = nil
             objc_setAssociatedObject(self, &NextTextFieldKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            assignInputAccessoryView()
+            applyInputAccessoryView()
             newValue?.previousTextField = self
         }
     }
@@ -31,11 +31,11 @@ public extension UITextField {
 
         set {
             objc_setAssociatedObject(self, &PreviousTextFieldKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            assignInputAccessoryView()
+            applyInputAccessoryView()
         }
     }
 
-    func assignInputAccessoryView() {
+    func applyInputAccessoryView() {
         let previousButton = UIBarButtonItem(title: "❬", style: .Plain, target: previousTextField, action: #selector(becomeFirstResponder))
         previousButton.enabled = previousTextField != nil
 
