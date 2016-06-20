@@ -18,7 +18,7 @@ To run the example project, run `pod try UITextField-Navigation`.
 
 ## Usage
 
-Use can set the `nextTextField` property for each `UITextField` either on the Interface Builder or programmatically. The `previousTextField` property will be set on the other `UITextField` automatically for you.
+You can set the `nextTextField` property for each `UITextField` either on the Interface Builder or programmatically. The `previousTextField` property will be set on the other `UITextField` automatically for you.
 
 Example:
 
@@ -32,6 +32,8 @@ textField1.nextTextField = textField2
 assert(textField2 == textField1.nextTextField)
 assert(textField1 == textField2.previousTextField)
 ```
+
+Please note that the `nextTextField` and `previousTextField` properties are not retained.
 
 ## Installation
 
