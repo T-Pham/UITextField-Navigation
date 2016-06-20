@@ -17,16 +17,10 @@ public extension UITextField {
         }
 
         set {
-            if let oldTextField = nextTextField {
-                oldTextField.previousTextField = nil
-            }
-
+            nextTextField?.previousTextField = nil
             objc_setAssociatedObject(self, &NextTextFieldKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             assignInputAccessoryView()
-
-            if let newTextField = newValue {
-                newTextField.previousTextField = self
-            }
+            newValue?.previousTextField = self
         }
     }
 
