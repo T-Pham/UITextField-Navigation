@@ -13,8 +13,8 @@ UITextField-Navigation adds next, previous and done buttons to the keyboard for 
 
 To run the example project, run `pod try UITextField-Navigation`.
 
-![Alt text](/Screenshots/screenshot1.png?raw=true "Screenshot 1")
-![Alt text](/Screenshots/screenshot2.gif?raw=true "Screenshot 2")
+![Alt text](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot1.png?raw=true "Screenshot 1")
+![Alt text](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot2.gif?raw=true "Screenshot 2")
 
 ## Usage
 
