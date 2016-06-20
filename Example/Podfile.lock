@@ -10,7 +10,7 @@ PODS:
     - Nimble
     - Quick
   - Quick (0.9.2)
-  - UITextField-Navigation (0.1.0)
+  - UITextField-Navigation (1.1.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -28,7 +28,7 @@ SPEC CHECKSUMS:
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
-  UITextField-Navigation: f3e3ae6382530e2971b7b2021f41e368d1d95f84
+  UITextField-Navigation: 2e4f87defc13af9a93542f00d27f084be61641b5
 
 PODFILE CHECKSUM: 6875d8b8e3dbf9af668e6d4acef67699dbece122
 
