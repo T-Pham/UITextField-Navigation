@@ -1,42 +1,16 @@
-#
-# Be sure to run `pod lib lint UITextField-Navigation.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = 'UITextField-Navigation'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of UITextField-Navigation.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/UITextField-Navigation'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Thanh Pham' => 'minhthanh@me.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/UITextField-Navigation.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'UITextField-Navigation/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'UITextField-Navigation' => ['UITextField-Navigation/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+s.name             = 'UITextField-Navigation'
+s.version          = '1.0.0'
+s.summary          = 'UITextField-Navigation make it easier to navigate between UITextFields.'
+s.description      = <<-DESC
+UITextField-Navigation adds next, previous and done buttons to the keyboard for your UITextFields. It allows you to specify a next text field either on the Interface Builder or programmatically. Then, you can access next and previous text fields of each UITextField easily.
+DESC
+s.homepage         = 'https://github.com/T-Pham/UITextField-Navigation'
+s.screenshots      = 'https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot1.png?raw=true', 'https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot2.gif?raw=true'
+s.license          = { :type => 'MIT', :file => 'LICENSE' }
+s.author           = { 'Thanh Pham' => 'minhthanh@me.com' }
+s.source           = { :git => 'https://github.com/T-Pham/UITextField-Navigation.git', :tag => s.version.to_s }
+s.ios.deployment_target = '8.0'
+s.source_files = 'UITextField-Navigation/Classes/**/*'
+s.frameworks = 'UIKit'
 end
