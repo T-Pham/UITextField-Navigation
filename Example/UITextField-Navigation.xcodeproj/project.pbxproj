@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B07FA101D16EE770033E592 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B07FA0F1D16EE770033E592 /* .gitignore */; };
+		1B64F2FD1D197F220045F0C5 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1B64F2FC1D197F220045F0C5 /* .travis.yml */; };
 		1BDE1EC71D17A254007535C7 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE1EC61D17A254007535C7 /* CHANGELOG.md */; };
 		5A6013A9850EA3A280EC49CD /* Pods_UITextField_Navigation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8876037254C92606841A7851 /* Pods_UITextField_Navigation_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		09199E30E5D5BDDFB8BBFF88 /* UITextField-Navigation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "UITextField-Navigation.podspec"; path = "../UITextField-Navigation.podspec"; sourceTree = "<group>"; };
 		1B07FA0F1D16EE770033E592 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		1B64F2FC1D197F220045F0C5 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		1BDE1EC61D17A254007535C7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UITextField-Navigation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITextField-Navigation_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				1B64F2FC1D197F220045F0C5 /* .travis.yml */,
 				1B07FA0F1D16EE770033E592 /* .gitignore */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for UITextField-Navigation */,
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B64F2FD1D197F220045F0C5 /* .travis.yml in Resources */,
 				1B07FA101D16EE770033E592 /* .gitignore in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,

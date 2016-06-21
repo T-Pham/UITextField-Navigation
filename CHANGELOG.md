@@ -6,3 +6,6 @@ Add Swift package manager
 
 # v1.1.0
 Better name for public method
+
+# v1.1.1
+Add travisCI testing
