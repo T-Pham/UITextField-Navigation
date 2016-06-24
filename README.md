@@ -1,10 +1,9 @@
 # UITextField-Navigation
 
 [![CI Status](http://img.shields.io/travis/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://travis-ci.org/T-Pham/UITextField-Navigation)
-[![GitHub issues](https://img.shields.io/github/issues/T-Pham/UITextField-Navigation.svg?maxAge=2592000&style=flat-square)](https://github.com/T-Pham/UITextField-Navigation/issues)
-[![Code Health](https://landscape.io/github/T-Pham/UITextField-Navigation/master/landscape.svg?style=flat-square)](https://landscape.io/github/T-Pham/UITextField-Navigation/master)
+[![GitHub issues](https://img.shields.io/github/issues/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://github.com/T-Pham/UITextField-Navigation/issues)
 [![Version](https://img.shields.io/cocoapods/v/UITextField-Navigation.svg?style=flat-square)](http://cocoapods.org/pods/UITextField-Navigation)
-[![CocoaPods](https://img.shields.io/cocoapods/dt/UITextField-Navigation.svg?maxAge=2592000&style=flat-square)](http://cocoapods.org/pods/UITextField-Navigation)
+[![CocoaPods](https://img.shields.io/cocoapods/dt/UITextField-Navigation.svg?style=flat-square)](http://cocoapods.org/pods/UITextField-Navigation)
 [![Platform](https://img.shields.io/cocoapods/p/UITextField-Navigation.svg?style=flat-square)](http://cocoapods.org/pods/UITextField-Navigation)
 [![License](https://img.shields.io/cocoapods/l/UITextField-Navigation.svg?style=flat-square)](LICENSE)
 
