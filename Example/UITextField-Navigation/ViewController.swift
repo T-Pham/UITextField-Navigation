@@ -19,8 +19,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Swift"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Objective-C", style: .Plain, target: self, action: #selector(rightBarButtonItemDidTap))
 
         textFieldCode1 = createRightTextField("UITextField Code 1", leftTextField: textFieldIB1)
         textFieldCode2 = createRightTextField("UITextField Code 2", leftTextField: textFieldIB2)
@@ -29,20 +27,36 @@ class ViewController: UIViewController {
         textFieldIB3.nextTextField = textFieldCode1
         textFieldCode1.nextTextField = textFieldCode2
         textFieldCode2.nextTextField = textFieldCode3
+
+        textFieldIB2.navigationDelegate = self
     }
 
     func createRightTextField(placeholder: String, leftTextField: UITextField) -> UITextField {
         let textField = UITextField()
         textField.borderStyle = .RoundedRect
-        textField.font = textFieldIB1.font
+        textField.font = leftTextField.font
         textField.placeholder = placeholder
         textField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textField)
         view.addConstraints([NSLayoutConstraint(item: textField, attribute: .Width, relatedBy: .Equal, toItem: leftTextField, attribute: .Width, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .CenterY, relatedBy: .Equal, toItem: leftTextField, attribute: .CenterY, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .Left, relatedBy: .Equal, toItem: leftTextField, attribute: .Right, multiplier: 1, constant: 15)])
         return textField
     }
+}
 
-    func rightBarButtonItemDidTap() {
-        navigationController?.pushViewController(ObjectiveCViewController(), animated: true)
+extension ViewController: UITextFieldNavigationDelegate {
+
+    func textFieldNavigationDidTapPreviousButton(textField: UITextField) {
+        print("textFieldNavigationDidTapPreviousButton: \(textField.placeholder)")
+        textField.previousTextField?.becomeFirstResponder()
+    }
+
+    func textFieldNavigationDidTapNextButton(textField: UITextField) {
+        print("textFieldNavigationDidTapNextButton: \(textField.placeholder)")
+        textField.nextTextField?.becomeFirstResponder()
+    }
+
+    func textFieldNavigationDidTapDoneButton(textField: UITextField) {
+        print("textFieldNavigationDidTapDoneButton: \(textField.placeholder)")
+        textField.resignFirstResponder()
     }
 }

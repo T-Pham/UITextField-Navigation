@@ -6,10 +6,28 @@
 //
 //
 
+var NavigationDelegateKey: Int8 = 0
 var NextTextFieldKey: Int8 = 0
 var PreviousTextFieldKey: Int8 = 0
 
+@objc public protocol UITextFieldNavigationDelegate {
+    optional func textFieldNavigationDidTapPreviousButton(textField: UITextField)
+    optional func textFieldNavigationDidTapNextButton(textField: UITextField)
+    optional func textFieldNavigationDidTapDoneButton(textField: UITextField)
+}
+
 public extension UITextField {
+
+    @IBOutlet weak var navigationDelegate: UITextFieldNavigationDelegate? {
+        get {
+            return (objc_getAssociatedObject(self, &NavigationDelegateKey) as? WeakObjectContainer)?.object as? UITextFieldNavigationDelegate
+        }
+
+        set {
+            objc_setAssociatedObject(self, &NavigationDelegateKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            applyInputAccessoryView()
+        }
+    }
 
     @IBOutlet weak var nextTextField: UITextField? {
         get {
@@ -36,18 +54,42 @@ public extension UITextField {
     }
 
     func applyInputAccessoryView() {
-        let previousButton = UIBarButtonItem(title: "❬", style: .Plain, target: previousTextField, action: #selector(becomeFirstResponder))
+        let previousButton = UIBarButtonItem(title: "❬", style: .Plain, target: self, action: #selector(previousButtonDidTap))
         previousButton.enabled = previousTextField != nil
 
-        let nextButton = UIBarButtonItem(title: "❭", style: .Plain, target: nextTextField, action: #selector(becomeFirstResponder))
+        let nextButton = UIBarButtonItem(title: "❭", style: .Plain, target: self, action: #selector(nextButtonDidTap))
         nextButton.enabled = nextTextField != nil
 
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(resignFirstResponder))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(doneButtonDidTap))
         let toolBar = UIToolbar()
         toolBar.items = [previousButton, nextButton, flexibleSpace, doneButton]
         toolBar.sizeToFit()
         inputAccessoryView = toolBar
+    }
+
+    internal func previousButtonDidTap() {
+        if let navigationDelegate = navigationDelegate, method = navigationDelegate.textFieldNavigationDidTapPreviousButton {
+            method(self)
+        } else {
+            previousTextField?.becomeFirstResponder()
+        }
+    }
+
+    internal func nextButtonDidTap() {
+        if let navigationDelegate = navigationDelegate, method = navigationDelegate.textFieldNavigationDidTapNextButton {
+            method(self)
+        } else {
+            nextTextField?.becomeFirstResponder()
+        }
+    }
+
+    internal func doneButtonDidTap() {
+        if let navigationDelegate = navigationDelegate, method = navigationDelegate.textFieldNavigationDidTapDoneButton {
+            method(self)
+        } else {
+            resignFirstResponder()
+        }
     }
 }
 
