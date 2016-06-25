@@ -19,6 +19,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Swift"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Objective-C", style: .Plain, target: self, action: #selector(rightBarButtonItemDidTap))
+
         textFieldCode1 = createRightTextField("UITextField Code 1", leftTextField: textFieldIB1)
         textFieldCode2 = createRightTextField("UITextField Code 2", leftTextField: textFieldIB2)
         textFieldCode3 = createRightTextField("UITextField Code 3", leftTextField: textFieldIB3)
@@ -37,5 +40,9 @@ class ViewController: UIViewController {
         view.addSubview(textField)
         view.addConstraints([NSLayoutConstraint(item: textField, attribute: .Width, relatedBy: .Equal, toItem: leftTextField, attribute: .Width, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .CenterY, relatedBy: .Equal, toItem: leftTextField, attribute: .CenterY, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .Left, relatedBy: .Equal, toItem: leftTextField, attribute: .Right, multiplier: 1, constant: 15)])
         return textField
+    }
+
+    func rightBarButtonItemDidTap() {
+        navigationController?.pushViewController(ObjectiveCViewController(), animated: true)
     }
 }
