@@ -33,7 +33,7 @@
     _textFieldCode1.nextTextField = _textFieldCode2;
     _textFieldCode2.nextTextField = _textFieldCode3;
 
-    _textFieldIB2.navigationDelegate = self;
+    _textFieldCode2.delegate = self;
 }
 
 - (UITextField *)createRightTextFieldWithPlaceholder:(NSString *)placeholder leftTextField:(UITextField *)letTextField {
@@ -45,6 +45,12 @@
     [self.view addSubview:textField];
     [self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:letTextField attribute:NSLayoutAttributeWidth multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:letTextField attribute:NSLayoutAttributeCenterY multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:letTextField attribute:NSLayoutAttributeRight multiplier:1 constant:15]]];
     return textField;
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    NSLog(@"textFieldDidBeginEditing: %@", textField.placeholder);
 }
 
 #pragma mark - UITextFieldNavigationDelegate

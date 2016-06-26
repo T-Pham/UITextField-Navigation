@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         textFieldCode1.nextTextField = textFieldCode2
         textFieldCode2.nextTextField = textFieldCode3
 
-        textFieldIB2.navigationDelegate = self
+        textFieldCode2.delegate = self
     }
 
     func createRightTextField(placeholder: String, leftTextField: UITextField) -> UITextField {
@@ -40,6 +40,12 @@ class ViewController: UIViewController {
         view.addSubview(textField)
         view.addConstraints([NSLayoutConstraint(item: textField, attribute: .Width, relatedBy: .Equal, toItem: leftTextField, attribute: .Width, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .CenterY, relatedBy: .Equal, toItem: leftTextField, attribute: .CenterY, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .Left, relatedBy: .Equal, toItem: leftTextField, attribute: .Right, multiplier: 1, constant: 15)])
         return textField
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(textField: UITextField) {
+        print("textFieldDidBeginEditing: \(textField.placeholder)")
     }
 }
 

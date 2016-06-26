@@ -47,6 +47,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="YLl-qs-4d1"/>
                                     <outlet property="nextTextField" destination="UDe-sO-4Mb" id="gdr-Qg-xNd"/>
                                 </connections>
                             </textField>
@@ -111,6 +112,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <outlet property="delegate" destination="1fR-K8-t7t" id="6TI-8Q-iSd"/>
                                     <outlet property="nextTextField" destination="Zwe-IA-H66" id="3A4-BW-rxV"/>
                                 </connections>
                             </textField>

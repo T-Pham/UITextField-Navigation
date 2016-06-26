@@ -6,28 +6,16 @@
 //
 //
 
-var NavigationDelegateKey: Int8 = 0
 var NextTextFieldKey: Int8 = 0
 var PreviousTextFieldKey: Int8 = 0
 
-@objc public protocol UITextFieldNavigationDelegate {
+@objc public protocol UITextFieldNavigationDelegate: UITextFieldDelegate {
     optional func textFieldNavigationDidTapPreviousButton(textField: UITextField)
     optional func textFieldNavigationDidTapNextButton(textField: UITextField)
     optional func textFieldNavigationDidTapDoneButton(textField: UITextField)
 }
 
 public extension UITextField {
-
-    @IBOutlet weak var navigationDelegate: UITextFieldNavigationDelegate? {
-        get {
-            return (objc_getAssociatedObject(self, &NavigationDelegateKey) as? WeakObjectContainer)?.object as? UITextFieldNavigationDelegate
-        }
-
-        set {
-            objc_setAssociatedObject(self, &NavigationDelegateKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            applyInputAccessoryView()
-        }
-    }
 
     @IBOutlet weak var nextTextField: UITextField? {
         get {
@@ -69,7 +57,7 @@ public extension UITextField {
     }
 
     internal func previousButtonDidTap() {
-        if let navigationDelegate = navigationDelegate, method = navigationDelegate.textFieldNavigationDidTapPreviousButton {
+        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapPreviousButton {
             method(self)
         } else {
             previousTextField?.becomeFirstResponder()
@@ -77,7 +65,7 @@ public extension UITextField {
     }
 
     internal func nextButtonDidTap() {
-        if let navigationDelegate = navigationDelegate, method = navigationDelegate.textFieldNavigationDidTapNextButton {
+        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapNextButton {
             method(self)
         } else {
             nextTextField?.becomeFirstResponder()
@@ -85,7 +73,7 @@ public extension UITextField {
     }
 
     internal func doneButtonDidTap() {
-        if let navigationDelegate = navigationDelegate, method = navigationDelegate.textFieldNavigationDidTapDoneButton {
+        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapDoneButton {
             method(self)
         } else {
             resignFirstResponder()
