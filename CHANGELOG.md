@@ -12,3 +12,6 @@ Add travisCI testing
 
 # v.1.2.0
 Add delegate methods
+
+# v.1.2.1
+Add documentation
