@@ -25,6 +25,7 @@ Example:
 ```swift
 import UITextField_Navigation
 
+...
 let textField1 = UITextField()
 let textField2 = UITextField()
 textField1.nextTextField = textField2
@@ -34,6 +35,62 @@ assert(textField1 == textField2.previousTextField)
 ```
 
 Please note that the `nextTextField` and `previousTextField` properties are not retained.
+
+To capture taps on the next, previous and done buttons, assign a `delegate` for your `UITextField` also either on the Interface Builder or programmatically. Then implement the `UITextFieldNavigationDelegate` protocol for the `delegate`.
+Please note that you have to explicitly declare that the `delegate` conforms to the protocol to make it work.
+
+Swift:
+
+```swift
+import UIKit
+import UITextField_Navigation
+
+...
+extension ViewController: UITextFieldNavigationDelegate { // explicitly protocol conforming declaration
+
+    func textFieldNavigationDidTapPreviousButton(textField: UITextField) {
+        textField.previousTextField?.becomeFirstResponder()
+        // your custom work
+    }
+
+    func textFieldNavigationDidTapNextButton(textField: UITextField) {
+        textField.nextTextField?.becomeFirstResponder()
+        // your custom work
+    }
+
+    func textFieldNavigationDidTapDoneButton(textField: UITextField) {
+        textField.resignFirstResponder()
+        // your custom work
+    }
+}
+```
+
+Objective-C:
+
+```objective-c
+#import <UITextField_Navigation/UITextField_Navigation-Swift.h>
+#import "ViewController.h"
+
+@interface ViewController () <UITextFieldNavigationDelegate> // explicitly protocol conforming declaration
+
+...
+#pragma mark - UITextFieldNavigationDelegate
+
+- (void)textFieldNavigationDidTapPreviousButton:(UITextField *)textField {
+    [textField.previousTextField becomeFirstResponder];
+    // your custom work
+}
+
+- (void)textFieldNavigationDidTapNextButton:(UITextField *)textField {
+    [textField.nextTextField becomeFirstResponder];
+    // your custom work
+}
+
+- (void)textFieldNavigationDidTapDoneButton:(UITextField *)textField {
+    [textField resignFirstResponder];
+    // your custom work
+}
+```
 
 ## Installation
 
