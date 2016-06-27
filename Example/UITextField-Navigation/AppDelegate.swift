@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UITextField_Navigation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        UITextFieldNavigationToolbar.appearance().barStyle = .Black
+        UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purpleColor()
+        UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.whiteColor()
         return true
     }
 }

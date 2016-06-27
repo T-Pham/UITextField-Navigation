@@ -34,6 +34,16 @@
     _textFieldCode2.nextTextField = _textFieldCode3;
 
     _textFieldCode2.delegate = self;
+    _textFieldCode2.textFieldNavigationToolbar.barStyle = UIBarStyleDefault;
+    _textFieldCode2.textFieldNavigationToolbar.backgroundColor = [UIColor redColor];
+    _textFieldCode2.textFieldNavigationToolbar.previousButton.title = @"Previous";
+    _textFieldCode2.textFieldNavigationToolbar.nextButton.title = @"Next";
+    _textFieldCode2.textFieldNavigationToolbar.doneButton.title = @"Dismiss";
+
+    UIBarButtonItem *customButton = [[UIBarButtonItem alloc] initWithTitle:@"Custom" style:UIBarButtonItemStylePlain target:nil action:nil];
+    customButton.tintColor = [UIColor whiteColor];
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    _textFieldCode2.textFieldNavigationToolbar.items = @[_textFieldCode2.textFieldNavigationToolbar.previousButton, _textFieldCode2.textFieldNavigationToolbar.nextButton, customButton, flexibleSpace, _textFieldCode2.textFieldNavigationToolbar.doneButton];
 }
 
 - (UITextField *)createRightTextFieldWithPlaceholder:(NSString *)placeholder leftTextField:(UITextField *)letTextField {

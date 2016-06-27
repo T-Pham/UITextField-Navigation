@@ -29,6 +29,16 @@ class ViewController: UIViewController {
         textFieldCode2.nextTextField = textFieldCode3
 
         textFieldCode2.delegate = self
+        textFieldCode2.textFieldNavigationToolbar?.barStyle = .Default
+        textFieldCode2.textFieldNavigationToolbar?.backgroundColor = UIColor.redColor()
+        textFieldCode2.textFieldNavigationToolbar?.previousButton.title = "Previous"
+        textFieldCode2.textFieldNavigationToolbar?.nextButton.title = "Next"
+        textFieldCode2.textFieldNavigationToolbar?.doneButton.title = "Dismiss"
+
+        let customButton = UIBarButtonItem(title: "Custom", style: .Plain, target: nil, action: nil)
+        customButton.tintColor = UIColor.whiteColor()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        textFieldCode2.textFieldNavigationToolbar?.items = [textFieldCode2.textFieldNavigationToolbar!.previousButton, textFieldCode2.textFieldNavigationToolbar!.nextButton, customButton, flexibleSpace, textFieldCode2.textFieldNavigationToolbar!.doneButton]
     }
 
     func createRightTextField(placeholder: String, leftTextField: UITextField) -> UITextField {

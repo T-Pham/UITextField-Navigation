@@ -37,23 +37,28 @@ public extension UITextField {
         }
     }
 
-    /// Apply the `inputAccessoryView`. Useful when you want the Done button but the text field does not have any next or previous text fields.
-    func applyInputAccessoryView() {
-        let previousButton = UIBarButtonItem(title: "❬", style: .Plain, target: self, action: #selector(previousButtonDidTap))
-        previousButton.enabled = previousTextField != nil
-
-        let nextButton = UIBarButtonItem(title: "❭", style: .Plain, target: self, action: #selector(nextButtonDidTap))
-        nextButton.enabled = nextTextField != nil
-
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(doneButtonDidTap))
-        let toolBar = UIToolbar()
-        toolBar.items = [previousButton, nextButton, flexibleSpace, doneButton]
-        toolBar.sizeToFit()
-        inputAccessoryView = toolBar
+    /// Returns the `inputAccessoryView` if it is a `UITextFieldNavigationToolbar`. Otherwise, returns `nil`.
+    var textFieldNavigationToolbar: UITextFieldNavigationToolbar? {
+        get {
+            return inputAccessoryView as? UITextFieldNavigationToolbar
+        }
     }
 
-    internal func previousButtonDidTap() {
+    /// Apply the `inputAccessoryView`. Useful when you want the Done button but the text field does not have any next or previous text fields.
+    func applyInputAccessoryView() {
+        if textFieldNavigationToolbar == nil {
+            let navigationToolbar = UITextFieldNavigationToolbar()
+            navigationToolbar.navigationDelegate = self
+            inputAccessoryView = navigationToolbar
+        }
+
+        textFieldNavigationToolbar?.previousButton.enabled = previousTextField != nil
+        textFieldNavigationToolbar?.nextButton.enabled = nextTextField != nil
+    }
+}
+
+extension UITextField: UITextFieldNavigationToolbarDelegate {
+    func textFieldNavigationToolbarDidTapPreviousButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
         if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapPreviousButton {
             method(self)
         } else {
@@ -61,7 +66,7 @@ public extension UITextField {
         }
     }
 
-    internal func nextButtonDidTap() {
+    func textFieldNavigationToolbarDidTapNextButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
         if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapNextButton {
             method(self)
         } else {
@@ -69,7 +74,7 @@ public extension UITextField {
         }
     }
 
-    internal func doneButtonDidTap() {
+    func textFieldNavigationToolbarDidTapDoneButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
         if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapDoneButton {
             method(self)
         } else {
