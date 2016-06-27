@@ -9,31 +9,6 @@
 var NextTextFieldKey: Int8 = 0
 var PreviousTextFieldKey: Int8 = 0
 
-/// The `UITextFieldNavigationDelegate` protocol defines methods used for capturing taps on the `inputAccessoryView`'s buttons. All of the methods of this protocol are optional. Objects conforming to this protocol also conform to the `UITextFieldDelegate` protocol.
-@objc public protocol UITextFieldNavigationDelegate: UITextFieldDelegate {
-
-    /**
-     Tells the `delegate` that the previous button was tapped. The `delegate` has to make the `previousTextField` `becomeFirstResponder` if needed.
-
-     - Parameter textField: the text field whose `inputAccessoryView`'s button was tapped.
-     */
-    optional func textFieldNavigationDidTapPreviousButton(textField: UITextField)
-
-    /**
-     Tells the `delegate` that the next button was tapped. The `delegate` has to make the `nextTextField` `becomeFirstResponder` if needed.
-
-     - Parameter textField: the text field whose `inputAccessoryView`'s button was tapped.
-     */
-    optional func textFieldNavigationDidTapNextButton(textField: UITextField)
-
-    /**
-     Tells the `delegate` that the done button was tapped. The `delegate` has to make the text field `resignFirstResponder` if needed.
-
-     - Parameter textField: the text field whose `inputAccessoryView`'s button was tapped.
-     */
-    optional func textFieldNavigationDidTapDoneButton(textField: UITextField)
-}
-
 public extension UITextField {
 
     /// The next text field. Not retained. Setting this will also set the `previousTextField` on the other text field.
@@ -100,13 +75,5 @@ public extension UITextField {
         } else {
             resignFirstResponder()
         }
-    }
-}
-
-class WeakObjectContainer {
-    weak var object: AnyObject?
-
-    init(object anObject: AnyObject?) {
-        object = anObject
     }
 }
