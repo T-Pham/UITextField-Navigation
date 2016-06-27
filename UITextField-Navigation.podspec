@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'UITextField-Navigation'
-s.version          = '1.2.1'
+s.version          = '1.3.0'
 s.summary          = 'UITextField-Navigation make it easier to navigate between UITextFields.'
 s.description      = <<-DESC
 UITextField-Navigation adds next, previous and done buttons to the keyboard for your UITextFields. It allows you to specify a next text field either on the Interface Builder or programmatically. Then, you can access next and previous text fields of each UITextField easily.

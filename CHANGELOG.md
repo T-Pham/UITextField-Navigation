@@ -10,8 +10,11 @@ Better name for public method
 # v1.1.1
 Add travisCI testing
 
-# v.1.2.0
+# v1.2.0
 Add delegate methods
 
-# v.1.2.1
+# v1.2.1
 Add documentation
+
+# v1.3.0
+Add the ability to customize the UI

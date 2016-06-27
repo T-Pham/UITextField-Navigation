@@ -32,12 +32,17 @@
 
 UITextField-Navigation adds next, previous and done buttons to the keyboard for your `UITextField`s. It allows you to specify a next text field either on the Interface Builder or programmatically. Then, you can access next and previous text fields of each `UITextField` easily.
 
+The UI is customizable.
+
 To run the example project, run `pod try UITextField-Navigation`.
 
-![Alt text](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot1.png?raw=true "Screenshot 1")
-![Alt text](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot2.gif?raw=true "Screenshot 2")
+![Screenshot 1](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot1.png?raw=true)
+![Screenshot 2](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot2.gif?raw=true)
+![Screenshot 3](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot3.png?raw=true)
 
 ## Usage
+
+### Basic
 
 You can set the `nextTextField` property for each `UITextField` either on the Interface Builder or programmatically. The `previousTextField` property will be set on the other `UITextField` automatically for you.
 
@@ -56,6 +61,8 @@ assert(textField1 == textField2.previousTextField)
 ```
 
 Please note that the `nextTextField` and `previousTextField` properties are not retained.
+
+### Capturing taps
 
 To capture taps on the next, previous and done buttons, assign a `delegate` for your `UITextField` also either on the Interface Builder or programmatically. Then implement the `UITextFieldNavigationDelegate` protocol for the `delegate`.
 Please note that you have to explicitly declare that the `delegate` conforms to the protocol to make it work.
@@ -111,6 +118,36 @@ Objective-C:
     [textField resignFirstResponder];
     // your custom work
 }
+```
+
+### UI Customization
+
+#### Using UIAppearance
+
+Modify the appearance proxy of the `UITextFieldNavigationToolbar` and `UITextFieldNavigationToolbarButtonItem` classes to customize the navigation view's UI for all text fields.
+
+```swift
+UITextFieldNavigationToolbar.appearance().barStyle = .Black
+UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purpleColor()
+UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.whiteColor()
+```
+
+#### Directly and adding more buttons
+
+Alternatively, you can modify the UI directly on each navigation view by accessing the `textFieldNavigationToolbar` property of a text field.
+
+```swift
+...
+textField.textFieldNavigationToolbar?.barStyle = .Default
+textField.textFieldNavigationToolbar?.backgroundColor = UIColor.redColor()
+textField.textFieldNavigationToolbar?.previousButton.title = "Previous"
+textField.textFieldNavigationToolbar?.nextButton.title = "Next"
+textField.textFieldNavigationToolbar?.doneButton.title = "Dismiss"
+
+// Add a custom button
+let customButton = UIBarButtonItem(title: "Custom", style: .Plain, target: nil, action: nil)
+let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+textField.textFieldNavigationToolbar?.items = [textField.textFieldNavigationToolbar!.previousButton, textField.textFieldNavigationToolbar!.nextButton, customButton, flexibleSpace, textField.textFieldNavigationToolbar!.doneButton]
 ```
 
 ## Installation
