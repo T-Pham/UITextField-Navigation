@@ -89,7 +89,7 @@ extension ViewController: UITextFieldNavigationDelegate { // explicitly protocol
 Objective-C:
 
 ```objective-c
-#import <UITextField_Navigation/UITextField_Navigation-Swift.h>
+@import UITextField_Navigation;
 #import "ViewController.h"
 
 @interface ViewController () <UITextFieldNavigationDelegate> // explicitly protocol conforming declaration

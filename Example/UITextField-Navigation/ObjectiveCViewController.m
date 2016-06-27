@@ -6,7 +6,7 @@
 //  Copyright © 2016 CocoaPods. All rights reserved.
 //
 
-#import <UITextField_Navigation/UITextField_Navigation-Swift.h>
+@import UITextField_Navigation;
 #import "ObjectiveCViewController.h"
 
 @interface ObjectiveCViewController () <UITextFieldNavigationDelegate>
