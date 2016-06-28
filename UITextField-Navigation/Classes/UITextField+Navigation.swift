@@ -14,12 +14,12 @@ public extension UITextField {
     /// The next text field. Not retained. Setting this will also set the `previousTextField` on the other text field.
     @IBOutlet weak var nextTextField: UITextField? {
         get {
-            return (objc_getAssociatedObject(self, &NextTextFieldKey) as? WeakObjectContainer)?.object as? UITextField
+            return retrieveTextField(&NextTextFieldKey)
         }
 
         set {
             nextTextField?.previousTextField = nil
-            objc_setAssociatedObject(self, &NextTextFieldKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            storeTextField(newValue, withKey: &NextTextFieldKey)
             applyInputAccessoryView()
             newValue?.previousTextField = self
         }
@@ -28,11 +28,11 @@ public extension UITextField {
     /// The previous text field. Not retained. This is set automatically on the other text field when you set the `nextTextField`.
     weak internal(set) var previousTextField: UITextField? {
         get {
-            return (objc_getAssociatedObject(self, &PreviousTextFieldKey) as? WeakObjectContainer)?.object as? UITextField
+            return retrieveTextField(&PreviousTextFieldKey)
         }
 
         set {
-            objc_setAssociatedObject(self, &PreviousTextFieldKey, WeakObjectContainer(object: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            storeTextField(newValue, withKey: &PreviousTextFieldKey)
             applyInputAccessoryView()
         }
     }
@@ -54,6 +54,25 @@ public extension UITextField {
 
         textFieldNavigationToolbar?.previousButton.enabled = previousTextField != nil
         textFieldNavigationToolbar?.nextButton.enabled = nextTextField != nil
+    }
+
+    internal func storeTextField(textField: UITextField?, withKey key: UnsafePointer<Void>) {
+        if let textField = textField {
+            objc_setAssociatedObject(self, key, WeakObjectContainer(object: textField), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        } else {
+            objc_setAssociatedObject(self, key, nil, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    internal func retrieveTextField(key: UnsafePointer<Void>) -> UITextField? {
+        guard let weakObjectContainer = objc_getAssociatedObject(self, key) else {
+            return nil
+        }
+        guard let textField = (weakObjectContainer as? WeakObjectContainer)?.object as? UITextField else {
+            storeTextField(nil, withKey: key)
+            return nil
+        }
+        return textField
     }
 }
 
