@@ -10,7 +10,6 @@
 		1B0176191D1EF71F00F38C56 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0176181D1EF71F00F38C56 /* ObjectiveCViewController.m */; };
 		1B07FA101D16EE770033E592 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B07FA0F1D16EE770033E592 /* .gitignore */; };
 		1B64F2FD1D197F220045F0C5 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1B64F2FC1D197F220045F0C5 /* .travis.yml */; };
-		1BDE1EC71D17A254007535C7 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE1EC61D17A254007535C7 /* CHANGELOG.md */; };
 		5A6013A9850EA3A280EC49CD /* Pods_UITextField_Navigation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8876037254C92606841A7851 /* Pods_UITextField_Navigation_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -367,7 +366,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				1BDE1EC71D17A254007535C7 /* CHANGELOG.md in Sources */,
 				1B0176191D1EF71F00F38C56 /* ObjectiveCViewController.m in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
