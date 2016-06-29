@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import UITextField_Navigation
 
-class UITextField_NavigtionTests: QuickSpec {
+class UITextField_NavigationTests: QuickSpec {
     var textField: UITextField!
 
     override func spec() {
