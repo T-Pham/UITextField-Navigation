@@ -2,13 +2,11 @@ use_frameworks!
 
 target 'UITextField-Navigation_Example' do
   pod 'UITextField-Navigation', :path => '../'
+end
 
-  target 'UITextField-Navigation_Tests' do
-    inherit! :search_paths
+target 'UITextField-Navigation_Tests' do
+    pod 'UITextField-Navigation', :path => '../'
 
     pod 'Quick', '~> 0.8'
     pod 'Nimble', '~> 3.0'
-    pod 'FBSnapshotTestCase'
-    pod 'Nimble-Snapshots'
-  end
 end

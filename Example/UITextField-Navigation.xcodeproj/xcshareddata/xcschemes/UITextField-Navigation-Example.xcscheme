@@ -40,7 +40,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -51,6 +52,14 @@
                BlueprintName = "UITextField-Navigation_Tests"
                ReferencedContainer = "container:UITextField-Navigation.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "UITextField_NavigtionTests/nextTextField__does_not_retain_the_next_text_field()">
+               </Test>
+               <Test
+                  Identifier = "UITextField_NavigtionTests/previousTextField__does_not_retain_the_next_text_field()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
