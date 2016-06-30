@@ -28,6 +28,7 @@
 		1B07FA0F1D16EE770033E592 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		1B64F2FC1D197F220045F0C5 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		1BDE1EC61D17A254007535C7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		39ABC9A49F54AB19257732E4 /* Pods-UITextField_Navigation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField_Navigation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UITextField-Navigation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITextField-Navigation_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +43,9 @@
 		7088DCBF300B77EA2394D245 /* Pods-UITextField-Navigation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField-Navigation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField-Navigation_Example/Pods-UITextField-Navigation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8876037254C92606841A7851 /* Pods_UITextField_Navigation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextField_Navigation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B0E7D865823BD2C4EF88B1 /* Pods_UITextField_Navigation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextField_Navigation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A702C3F8D16DF37CB2C8A808 /* Pods-UITextField-Navigation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField-Navigation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField-Navigation_Tests/Pods-UITextField-Navigation_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B340CA80E7FB1B571C6CFC3D /* Pods-UITextField-Navigation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField-Navigation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField-Navigation_Tests/Pods-UITextField-Navigation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A702C3F8D16DF37CB2C8A808 /* Pods-UITextField_Navigation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField_Navigation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField-Navigation_Tests/Pods-UITextField_Navigation_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A944379C6F4C74E581ABED47 /* Pods-UITextField_Navigation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField_Navigation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B340CA80E7FB1B571C6CFC3D /* Pods-UITextField_Navigation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField_Navigation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField-Navigation_Tests/Pods-UITextField_Navigation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C38AC293AA45DCF1A2439FEF /* Pods-UITextField-Navigation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField-Navigation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField-Navigation_Example/Pods-UITextField-Navigation_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		ED54BC9C50B6C80A295F857B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,8 +160,10 @@
 			children = (
 				C38AC293AA45DCF1A2439FEF /* Pods-UITextField-Navigation_Example.debug.xcconfig */,
 				7088DCBF300B77EA2394D245 /* Pods-UITextField-Navigation_Example.release.xcconfig */,
-				B340CA80E7FB1B571C6CFC3D /* Pods-UITextField-Navigation_Tests.debug.xcconfig */,
-				A702C3F8D16DF37CB2C8A808 /* Pods-UITextField-Navigation_Tests.release.xcconfig */,
+				B340CA80E7FB1B571C6CFC3D /* Pods-UITextField_Navigation_Tests.debug.xcconfig */,
+				A702C3F8D16DF37CB2C8A808 /* Pods-UITextField_Navigation_Tests.release.xcconfig */,
+				A944379C6F4C74E581ABED47 /* Pods-UITextField_Navigation_Tests.debug.xcconfig */,
+				39ABC9A49F54AB19257732E4 /* Pods-UITextField_Navigation_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -280,7 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITextField-Navigation_Tests/Pods-UITextField-Navigation_Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		16D56AEF1D0F4A779C83F9F4 /* [CP] Embed Pods Frameworks */ = {
@@ -325,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITextField-Navigation_Tests/Pods-UITextField-Navigation_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F63938A6E0A756712FE22FBC /* [CP] Copy Pods Resources */ = {
@@ -516,7 +520,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B340CA80E7FB1B571C6CFC3D /* Pods-UITextField-Navigation_Tests.debug.xcconfig */;
+			baseConfigurationReference = A944379C6F4C74E581ABED47 /* Pods-UITextField_Navigation_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -535,7 +539,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A702C3F8D16DF37CB2C8A808 /* Pods-UITextField-Navigation_Tests.release.xcconfig */;
+			baseConfigurationReference = 39ABC9A49F54AB19257732E4 /* Pods-UITextField_Navigation_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
