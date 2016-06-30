@@ -115,35 +115,16 @@ class UITextField_NavigationTests: QuickSpec {
         describe("delegate") {
 
             context("implements all methods") {
-
-                class UITextFieldNavigationDelegateImplementation: NSObject, UITextFieldNavigationDelegate {
-                    var previousButtonTapped = false
-                    var nextButtonTapped = false
-                    var doneButtonTapped = false
-
-                    @objc func textFieldNavigationDidTapPreviousButton(textField: UITextField) {
-                        previousButtonTapped = true
-                    }
-
-                    @objc func textFieldNavigationDidTapNextButton(textField: UITextField) {
-                        nextButtonTapped = true
-                    }
-
-                    @objc func textFieldNavigationDidTapDoneButton(textField: UITextField) {
-                        doneButtonTapped = true
-                    }
-                }
-
                 var previousTextField: UITextField!
                 var nextTextField: UITextField!
-                var delegate: UITextFieldNavigationDelegateImplementation!
+                var delegate: UITextFieldNavigationDelegateFullImplementation!
 
                 beforeEach {
                     previousTextField = UITextField()
                     nextTextField = UITextField()
                     previousTextField.nextTextField = self.textField
                     self.textField.nextTextField = nextTextField;
-                    delegate = UITextFieldNavigationDelegateImplementation()
+                    delegate = UITextFieldNavigationDelegateFullImplementation()
                     self.textField.delegate = delegate
                 }
 
@@ -167,28 +148,10 @@ class UITextField_NavigationTests: QuickSpec {
             }
 
             context("implements no methods") {
-
-                class UITextFieldNavigationDelegateImplementation: NSObject, UITextFieldNavigationDelegate {}
-
-                class MyTextField: UITextField {
-                    var resignFirstResponderPerformed = false
-                    var becomeFirstResponderPerformed = false
-
-                    override func resignFirstResponder() -> Bool {
-                        resignFirstResponderPerformed = true
-                        return super.resignFirstResponder()
-                    }
-
-                    private override func becomeFirstResponder() -> Bool {
-                        becomeFirstResponderPerformed = true
-                        return super.becomeFirstResponder()
-                    }
-                }
-
                 var textField: MyTextField!
                 var previousTextField: MyTextField!
                 var nextTextField: MyTextField!
-                var delegate: UITextFieldNavigationDelegateImplementation!
+                var delegate: UITextFieldNavigationDelegateEmptyImplementation!
 
                 beforeEach {
                     textField = MyTextField()
@@ -196,7 +159,7 @@ class UITextField_NavigationTests: QuickSpec {
                     nextTextField = MyTextField()
                     previousTextField.nextTextField = textField
                     textField.nextTextField = nextTextField;
-                    delegate = UITextFieldNavigationDelegateImplementation()
+                    delegate = UITextFieldNavigationDelegateEmptyImplementation()
                     textField.delegate = delegate
                 }
 

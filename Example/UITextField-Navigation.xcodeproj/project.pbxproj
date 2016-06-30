@@ -11,6 +11,9 @@
 		1B07FA101D16EE770033E592 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B07FA0F1D16EE770033E592 /* .gitignore */; };
 		1B64F2FD1D197F220045F0C5 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1B64F2FC1D197F220045F0C5 /* .travis.yml */; };
 		1BE2D27C1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D27B1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift */; };
+		1BE2D27F1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D27E1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift */; };
+		1BE2D2811D2539700000E03E /* UITextFieldNavigationDelegateEmptyImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D2801D2539700000E03E /* UITextFieldNavigationDelegateEmptyImplementation.swift */; };
+		1BE2D2831D2539820000E03E /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D2821D2539820000E03E /* MyTextField.swift */; };
 		5A6013A9850EA3A280EC49CD /* Pods_UITextField_Navigation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8876037254C92606841A7851 /* Pods_UITextField_Navigation_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -30,6 +33,9 @@
 		1B64F2FC1D197F220045F0C5 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		1BDE1EC61D17A254007535C7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		1BE2D27B1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbarTests.swift; sourceTree = "<group>"; };
+		1BE2D27E1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationDelegateFullImplementation.swift; sourceTree = "<group>"; };
+		1BE2D2801D2539700000E03E /* UITextFieldNavigationDelegateEmptyImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationDelegateEmptyImplementation.swift; sourceTree = "<group>"; };
+		1BE2D2821D2539820000E03E /* MyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		39ABC9A49F54AB19257732E4 /* Pods-UITextField_Navigation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField_Navigation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UITextField-Navigation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITextField-Navigation_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BE2D27D1D2539020000E03E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1BE2D27E1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift */,
+				1BE2D2801D2539700000E03E /* UITextFieldNavigationDelegateEmptyImplementation.swift */,
+				1BE2D2821D2539820000E03E /* MyTextField.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		1D151E2DFCC2436AF28C41F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1BE2D27D1D2539020000E03E /* Classes */,
 				607FACEB1AFB9204008FA782 /* UITextField+NavigationTests.swift */,
 				1BE2D27B1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -378,6 +395,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE2D2831D2539820000E03E /* MyTextField.swift in Sources */,
+				1BE2D2811D2539700000E03E /* UITextFieldNavigationDelegateEmptyImplementation.swift in Sources */,
+				1BE2D27F1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* UITextField+NavigationTests.swift in Sources */,
 				1BE2D27C1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift in Sources */,
 			);
