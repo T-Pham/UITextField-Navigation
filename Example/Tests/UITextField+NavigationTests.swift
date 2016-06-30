@@ -40,10 +40,10 @@ class UITextField_NavigationTests: QuickSpec {
             }
 
             it("does not retain the next text field") {
-                var nextTextField: UITextField? = UITextField()
-                self.textField.nextTextField = nextTextField
-                nextTextField = nil
-                expect(self.textField.nextTextField).toEventually(beNil())
+                autoreleasepool {
+                    self.textField.nextTextField = UITextField()
+                }
+                expect(self.textField.nextTextField).to(beNil())
             }
 
             it("updates the inputAccessoryView") {
@@ -66,10 +66,12 @@ class UITextField_NavigationTests: QuickSpec {
             }
 
             it("does not retain the next text field") {
-                var previousTextField: UITextField? = UITextField()
-                previousTextField!.nextTextField = self.textField
-                previousTextField = nil;
-                expect(self.textField.previousTextField).toEventually(beNil())
+                autoreleasepool {
+                    var previousTextField: UITextField? = UITextField()
+                    previousTextField!.nextTextField = self.textField
+                    previousTextField = nil;
+                }
+                expect(self.textField.previousTextField).to(beNil())
             }
 
             it("updates the inputAccessoryView") {

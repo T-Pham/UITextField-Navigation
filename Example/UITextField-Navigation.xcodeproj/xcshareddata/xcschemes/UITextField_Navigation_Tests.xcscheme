@@ -38,14 +38,6 @@
                BlueprintName = "UITextField_Navigation_Tests"
                ReferencedContainer = "container:UITextField-Navigation.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "UITextField_NavigationTests/nextTextField__does_not_retain_the_next_text_field()">
-               </Test>
-               <Test
-                  Identifier = "UITextField_NavigationTests/previousTextField__does_not_retain_the_next_text_field()">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <AdditionalOptions>
