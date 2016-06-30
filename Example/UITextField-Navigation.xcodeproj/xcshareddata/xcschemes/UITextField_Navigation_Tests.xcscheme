@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "UITextField-Navigation_Tests.xctest"
-               BlueprintName = "UITextField-Navigation_Tests"
+               BuildableName = "UITextField_Navigation_Tests.xctest"
+               BlueprintName = "UITextField_Navigation_Tests"
                ReferencedContainer = "container:UITextField-Navigation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "UITextField-Navigation_Tests.xctest"
-               BlueprintName = "UITextField-Navigation_Tests"
+               BuildableName = "UITextField_Navigation_Tests.xctest"
+               BlueprintName = "UITextField_Navigation_Tests"
                ReferencedContainer = "container:UITextField-Navigation.xcodeproj">
             </BuildableReference>
             <SkippedTests>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACE41AFB9204008FA782"
-            BuildableName = "UITextField-Navigation_Tests.xctest"
-            BlueprintName = "UITextField-Navigation_Tests"
+            BuildableName = "UITextField_Navigation_Tests.xctest"
+            BlueprintName = "UITextField_Navigation_Tests"
             ReferencedContainer = "container:UITextField-Navigation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACE41AFB9204008FA782"
-            BuildableName = "UITextField-Navigation_Tests.xctest"
-            BlueprintName = "UITextField-Navigation_Tests"
+            BuildableName = "UITextField_Navigation_Tests.xctest"
+            BlueprintName = "UITextField_Navigation_Tests"
             ReferencedContainer = "container:UITextField-Navigation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

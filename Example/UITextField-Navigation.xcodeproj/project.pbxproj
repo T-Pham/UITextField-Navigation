@@ -35,7 +35,7 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* UITextField-Navigation_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UITextField-Navigation_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* UITextField_Navigation_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITextField_Navigation_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* UITextField+NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+NavigationTests.swift"; sourceTree = "<group>"; };
 		68B2A3BE62371467C0CD0EF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* UITextField-Navigation_Example.app */,
-				607FACE51AFB9204008FA782 /* UITextField-Navigation_Tests.xctest */,
+				607FACE51AFB9204008FA782 /* UITextField_Navigation_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 			productReference = 607FACD01AFB9204008FA782 /* UITextField-Navigation_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* UITextField-Navigation_Tests */ = {
+		607FACE41AFB9204008FA782 /* UITextField_Navigation_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UITextField-Navigation_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UITextField_Navigation_Tests" */;
 			buildPhases = (
 				FC41D15A5B52D678402FD0B9 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -202,9 +202,9 @@
 			);
 			dependencies = (
 			);
-			name = "UITextField-Navigation_Tests";
+			name = UITextField_Navigation_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* UITextField-Navigation_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* UITextField_Navigation_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -240,7 +240,7 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* UITextField-Navigation_Example */,
-				607FACE41AFB9204008FA782 /* UITextField-Navigation_Tests */,
+				607FACE41AFB9204008FA782 /* UITextField_Navigation_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -569,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UITextField-Navigation_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UITextField_Navigation_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
