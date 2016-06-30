@@ -27,7 +27,7 @@ public class UITextFieldNavigationToolbar: UIToolbar {
 
     /// Has not been implemented. Use `init()` instead.
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 
     init() {
