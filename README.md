@@ -33,13 +33,12 @@
 
 UITextField-Navigation adds next, previous and done buttons to the keyboard for your `UITextField`s. It allows you to specify a next text field either on the Interface Builder or programmatically. Then, you can access next and previous text fields of each `UITextField` easily.
 
-The UI is customizable.
+The UI is [**highly customizable**](#ui-customization).
 
 To run the example project, run `pod try UITextField-Navigation`.
 
 ![Screenshot 1](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot1.png?raw=true)
 ![Screenshot 2](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot2.gif?raw=true)
-![Screenshot 3](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot3.png?raw=true)
 
 ## Usage
 
@@ -133,6 +132,8 @@ UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purpleColor(
 UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.whiteColor()
 ```
 
+![Screenshot 3](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot3.png?raw=true)
+
 #### Directly and adding more buttons
 
 Alternatively, you can modify the UI directly on each navigation view by accessing the `textFieldNavigationToolbar` property of a text field.
@@ -150,6 +151,8 @@ let customButton = UIBarButtonItem(title: "Custom", style: .Plain, target: nil, 
 let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
 textField.textFieldNavigationToolbar?.items = [textField.textFieldNavigationToolbar!.previousButton, textField.textFieldNavigationToolbar!.nextButton, customButton, flexibleSpace, textField.textFieldNavigationToolbar!.doneButton]
 ```
+
+![Screenshot 4](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot4.png?raw=true)
 
 ## Installation
 

@@ -21,3 +21,6 @@ Add the ability to customize the UI
 
 # v1.3.1
 Improve memory handling
+
+# v1.3.2
+Add tests
