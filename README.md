@@ -27,6 +27,7 @@
 [![Version](https://img.shields.io/cocoapods/v/UITextField-Navigation.svg?style=flat-square)](http://cocoapods.org/pods/UITextField-Navigation)
 [![CocoaPods](https://img.shields.io/cocoapods/dt/UITextField-Navigation.svg?style=flat-square)](http://cocoapods.org/pods/UITextField-Navigation)
 [![Platform](https://img.shields.io/cocoapods/p/UITextField-Navigation.svg?style=flat-square)](http://cocoapods.org/pods/UITextField-Navigation)
+[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/UITextField-Navigation.svg?style=flat-square)](http://cocoadocs.org/docsets/UITextField-Navigation)
 [![License](https://img.shields.io/cocoapods/l/UITextField-Navigation.svg?style=flat-square)](LICENSE)
 
 ## Description
