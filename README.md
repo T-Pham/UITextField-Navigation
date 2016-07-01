@@ -21,7 +21,7 @@
 
 # UITextField-Navigation
 
-[![CI Status](http://img.shields.io/travis/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://travis-ci.org/T-Pham/UITextField-Navigation)
+[![CI Status](https://img.shields.io/travis/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://travis-ci.org/T-Pham/UITextField-Navigation)
 [![GitHub issues](https://img.shields.io/github/issues/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://github.com/T-Pham/UITextField-Navigation/issues)
 [![Codecov](https://img.shields.io/codecov/c/github/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://codecov.io/gh/T-Pham/UITextField-Navigation)
 [![Version](https://img.shields.io/cocoapods/v/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
