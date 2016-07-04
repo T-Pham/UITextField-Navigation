@@ -36,8 +36,11 @@ UITextField-Navigation adds next, previous and done buttons to the keyboard for 
 
 The UI is [**highly customizable**](#ui-customization).
 
-To run the example project, run `pod try UITextField-Navigation`.
+To run the example project:
 
+`pod try UITextField-Navigation`
+
+![Screenshot 0](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot0.png?raw=true)
 ![Screenshot 1](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot1.png?raw=true)
 ![Screenshot 2](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot2.gif?raw=true)
 
