@@ -24,3 +24,6 @@ Improve memory handling
 
 # v1.3.2
 Add tests
+
+# v1.4.0
+Update icons for all buttons
