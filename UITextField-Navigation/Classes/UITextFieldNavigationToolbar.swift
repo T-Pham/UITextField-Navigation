@@ -31,8 +31,8 @@ public class UITextFieldNavigationToolbar: UIToolbar {
     }
 
     init() {
-        previousButton = UITextFieldNavigationToolbarButtonItem(title: "❬", style: .Plain, target: nil, action: nil)
-        nextButton = UITextFieldNavigationToolbarButtonItem(title: "❭", style: .Plain, target: nil, action: nil)
+        previousButton = UITextFieldNavigationToolbarButtonItem(title: " ❮ ", style: .Plain, target: nil, action: nil)
+        nextButton = UITextFieldNavigationToolbarButtonItem(title: " ❯ ", style: .Plain, target: nil, action: nil)
         doneButton = UITextFieldNavigationToolbarButtonItem(title: "Done", style: .Plain, target: nil, action: nil)
 
         super.init(frame: CGRectZero)
