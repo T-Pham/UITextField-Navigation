@@ -160,12 +160,17 @@ textField.textFieldNavigationToolbar?.items = [textField.textFieldNavigationTool
 
 ## Installation
 
+#### CocoaPods
 UITextField-Navigation is available through [CocoaPods](http://cocoapods.org/pods/UITextField-Navigation). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "UITextField-Navigation"
 ```
+
+#### Manually
+1. Download and drop ```/UITextField-Navigation/Classes```folder in your project.  
+2. Congratulations!  
 
 ## License
 
