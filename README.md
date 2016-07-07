@@ -169,8 +169,8 @@ pod "UITextField-Navigation"
 ```
 
 #### Manually
-1. Download and drop ```/UITextField-Navigation/Classes```folder in your project.  
-2. Congratulations!  
+1. Download and drop `/UITextField-Navigation/Classes` folder in your project.
+2. Congratulations!
 
 ## License
 
