@@ -6,5 +6,7 @@
 //
 //
 
+import UIKit
+
 /// Class for the previous, next and done buttons. Created for easily setting `UIAppearance`.
 public class UITextFieldNavigationToolbarButtonItem: UIBarButtonItem {}

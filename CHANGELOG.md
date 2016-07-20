@@ -27,3 +27,6 @@ Add tests
 
 # v1.4.0
 Update icons for all buttons
+
+# v1.4.1
+Support Carthage

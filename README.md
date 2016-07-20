@@ -24,6 +24,7 @@
 [![CI Status](https://img.shields.io/travis/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://travis-ci.org/T-Pham/UITextField-Navigation)
 [![GitHub issues](https://img.shields.io/github/issues/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://github.com/T-Pham/UITextField-Navigation/issues)
 [![Codecov](https://img.shields.io/codecov/c/github/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://codecov.io/gh/T-Pham/UITextField-Navigation)
+[![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
 [![CocoaPods](https://img.shields.io/cocoapods/dt/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
 [![Platform](https://img.shields.io/cocoapods/p/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
@@ -160,15 +161,24 @@ textField.textFieldNavigationToolbar?.items = [textField.textFieldNavigationTool
 
 ## Installation
 
-#### CocoaPods
-UITextField-Navigation is available through [CocoaPods](http://cocoapods.org/pods/UITextField-Navigation). To install
-it, simply add the following line to your Podfile:
+### [CocoaPods](https://cocoapods.org/pods/UITextField-Navigation)
+
+Add the line below to your Podfile:
 
 ```ruby
 pod "UITextField-Navigation"
 ```
 
-#### Manually
+### [Carthage](https://github.com/Carthage/Carthage)
+
+Add the line below to your Cartfile:
+
+```ruby
+github "T-Pham/UITextField-Navigation"
+```
+
+### Manually
+
 1. Download and drop `/UITextField-Navigation/Classes` folder in your project.
 2. Congratulations!
 

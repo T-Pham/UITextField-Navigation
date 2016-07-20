@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../UITextField-Navigation/UITextField-Navigation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:UITextField-Navigation.xcodeproj">
    </FileRef>
    <FileRef

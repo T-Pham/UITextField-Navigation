@@ -6,6 +6,8 @@
 //
 //
 
+import UIKit
+
 /// The `UITextFieldNavigationDelegate` protocol defines methods used for capturing taps on the `inputAccessoryView`'s buttons. All of the methods of this protocol are optional. Objects conforming to this protocol also conform to the `UITextFieldDelegate` protocol.
 @objc public protocol UITextFieldNavigationDelegate: UITextFieldDelegate {
 

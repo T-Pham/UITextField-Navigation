@@ -6,6 +6,8 @@
 //
 //
 
+import UIKit
+
 protocol UITextFieldNavigationToolbarDelegate: class {
     func textFieldNavigationToolbarDidTapPreviousButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar)
     func textFieldNavigationToolbarDidTapNextButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar)
