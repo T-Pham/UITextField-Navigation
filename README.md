@@ -24,12 +24,16 @@
 [![CI Status](https://img.shields.io/travis/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://travis-ci.org/T-Pham/UITextField-Navigation)
 [![GitHub issues](https://img.shields.io/github/issues/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://github.com/T-Pham/UITextField-Navigation/issues)
 [![Codecov](https://img.shields.io/codecov/c/github/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://codecov.io/gh/T-Pham/UITextField-Navigation)
-[![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
-[![Version](https://img.shields.io/cocoapods/v/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
-[![CocoaPods](https://img.shields.io/cocoapods/dt/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
-[![Platform](https://img.shields.io/cocoapods/p/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
 [![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/UITextField-Navigation.svg?style=flat-square)](http://cocoadocs.org/docsets/UITextField-Navigation)
+
+[![GitHub release](https://img.shields.io/github/tag/T-Pham/UITextField-Navigation.svg?style=flat-square&label=Release)](https://github.com/T-Pham/UITextField-Navigation/releases)
+![Platform](https://img.shields.io/cocoapods/p/UITextField-Navigation.svg?style=flat-square)
 [![License](https://img.shields.io/cocoapods/l/UITextField-Navigation.svg?style=flat-square)](LICENSE)
+
+[![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
+
+[![CocoaPods](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
+[![CocoaPods downloads](https://img.shields.io/cocoapods/dt/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
 
 ## Description
 
