@@ -26,8 +26,8 @@
 [![Codecov](https://img.shields.io/codecov/c/github/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://codecov.io/gh/T-Pham/UITextField-Navigation)
 [![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/UITextField-Navigation.svg?style=flat-square)](http://cocoadocs.org/docsets/UITextField-Navigation)
 
-[![GitHub release](https://img.shields.io/github/tag/T-Pham/UITextField-Navigation.svg?style=flat-square&label=Release)](https://github.com/T-Pham/UITextField-Navigation/releases)
-![Platform](https://img.shields.io/cocoapods/p/UITextField-Navigation.svg?style=flat-square)
+[![GitHub release](https://img.shields.io/github/tag/T-Pham/UITextField-Navigation.svg?style=flat-square&label=release)](https://github.com/T-Pham/UITextField-Navigation/releases)
+[![Platform](https://img.shields.io/cocoapods/p/UITextField-Navigation.svg?style=flat-square)](https://github.com/T-Pham/UITextField-Navigation)
 [![License](https://img.shields.io/cocoapods/l/UITextField-Navigation.svg?style=flat-square)](LICENSE)
 
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
