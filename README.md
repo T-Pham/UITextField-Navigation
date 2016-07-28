@@ -76,8 +76,8 @@ Please note that the `nextTextField` and `previousTextField` properties are not 
 To capture taps on the next, previous and done buttons, assign a `delegate` for your `UITextField` also either on the Interface Builder or programmatically. Then implement the `UITextFieldNavigationDelegate` protocol for the `delegate`.
 Please note that you have to explicitly declare that the `delegate` conforms to the protocol to make it work.
 
-Swift:
-
+<details open>
+<summary>Swift:</summary>
 ```swift
 import UIKit
 import UITextField_Navigation
@@ -101,9 +101,10 @@ extension ViewController: UITextFieldNavigationDelegate { // explicitly protocol
     }
 }
 ```
+</details>
 
-Objective-C:
-
+<details>
+<summary>Objective-C:</summary>
 ```objective-c
 @import UITextField_Navigation;
 #import "ViewController.h"
@@ -128,6 +129,7 @@ Objective-C:
     // your custom work
 }
 ```
+</details>
 
 ### UI Customization
 
