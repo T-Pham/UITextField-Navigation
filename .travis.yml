@@ -6,6 +6,7 @@ before_install:
 - gem install cocoapods --no-document
 - pod install --project-directory=Example
 script:
+- open -b com.apple.iphonesimulator
 - xcodebuild -scheme UITextField_Navigation_Tests -workspace Example/UITextField-Navigation.xcworkspace -sdk iphonesimulator9.3 -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.3' build test | xcpretty
 - pod lib lint
 after_success:
