@@ -167,20 +167,20 @@ textField.textFieldNavigationToolbar?.items = [textField.textFieldNavigationTool
 
 ## Installation
 
-### [CocoaPods](https://cocoapods.org/pods/UITextField-Navigation)
-
-Add the line below to your Podfile:
-
-```ruby
-pod "UITextField-Navigation"
-```
-
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 Add the line below to your Cartfile:
 
 ```ruby
 github "T-Pham/UITextField-Navigation"
+```
+
+### [CocoaPods](https://cocoapods.org/pods/UITextField-Navigation)
+
+Add the line below to your Podfile:
+
+```ruby
+pod "UITextField-Navigation"
 ```
 
 ### Manually
