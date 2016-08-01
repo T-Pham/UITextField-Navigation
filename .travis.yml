@@ -4,7 +4,7 @@ cache: cocoapods
 podfile: Example/Podfile
 before_install:
 - gem install cocoapods --no-document
-- pod update repo
+- pod repo update
 - pod install --project-directory=Example
 script:
 - open -b com.apple.iphonesimulator
