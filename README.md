@@ -180,7 +180,7 @@ github "T-Pham/UITextField-Navigation"
 Add the line below to your Podfile:
 
 ```ruby
-pod "UITextField-Navigation"
+pod 'UITextField-Navigation'
 ```
 
 ### Manually
