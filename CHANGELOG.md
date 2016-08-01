@@ -30,3 +30,6 @@ Update icons for all buttons
 
 # v1.4.1
 Support Carthage
+
+# v1.4.2
+Correct some metadata
