@@ -188,6 +188,12 @@ pod 'UITextField-Navigation'
 1. Download and drop [`/UITextField-Navigation/Classes`](/UITextField-Navigation/Classes) folder in your project.
 2. Congratulations!
 
+## Apps that use UITextField-Navigation
+
+Hello fellow developers. I can see that the library has been adopted in some apps. If your app also uses the library, it would be great if you can share it here. Please add it to the list below. Thanks!
+
+1. [Catder - Random animated cat photos](https://itunes.apple.com/us/app/catder-random-animated-cat/id1123343798?ls=1&mt=8)
+
 ## License
 
 UITextField-Navigation is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
