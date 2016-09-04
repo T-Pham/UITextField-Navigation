@@ -1,7 +1,7 @@
 PODS:
   - Nimble (3.2.0)
   - Quick (0.9.3)
-  - UITextField-Navigation (1.4.2)
+  - UITextField-Navigation (1.4.3)
 
 DEPENDENCIES:
   - Nimble (~> 3.0)
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
-  UITextField-Navigation: 3a67a9a94f8f0213ab8ce1ca8b1732a6aa67240c
+  UITextField-Navigation: 652290ee8c634ea9e6ada10abff5f2ffb3d5050e
 
 PODFILE CHECKSUM: 93fbdf34812c4565fc82fbc53bee6750aae2db1a
 

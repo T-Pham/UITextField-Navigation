@@ -33,3 +33,6 @@ Support Carthage
 
 # v1.4.2
 Correct some metadata
+
+# v1.4.3
+Update swift package
