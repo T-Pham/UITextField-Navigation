@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B0176191D1EF71F00F38C56 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0176181D1EF71F00F38C56 /* ObjectiveCViewController.m */; };
 		1B07FA101D16EE770033E592 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B07FA0F1D16EE770033E592 /* .gitignore */; };
+		1B5291DC1D7BEFDD00BAE977 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5291DB1D7BEFDD00BAE977 /* Package.swift */; };
 		1B64F2FD1D197F220045F0C5 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1B64F2FC1D197F220045F0C5 /* .travis.yml */; };
 		1BE2D27C1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D27B1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift */; };
 		1BE2D27F1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D27E1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift */; };
@@ -30,6 +31,7 @@
 		1B0176171D1EF71F00F38C56 /* ObjectiveCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCViewController.h; sourceTree = "<group>"; };
 		1B0176181D1EF71F00F38C56 /* ObjectiveCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCViewController.m; sourceTree = "<group>"; };
 		1B07FA0F1D16EE770033E592 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		1B5291DB1D7BEFDD00BAE977 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		1B64F2FC1D197F220045F0C5 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		1BDE1EC61D17A254007535C7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		1BE2D27B1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbarTests.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				1B64F2FC1D197F220045F0C5 /* .travis.yml */,
 				1B07FA0F1D16EE770033E592 /* .gitignore */,
+				1B5291DB1D7BEFDD00BAE977 /* Package.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for UITextField-Navigation */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -385,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5291DC1D7BEFDD00BAE977 /* Package.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				1B0176191D1EF71F00F38C56 /* ObjectiveCViewController.m in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
