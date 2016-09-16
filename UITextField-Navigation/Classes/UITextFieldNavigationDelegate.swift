@@ -16,19 +16,19 @@ import UIKit
 
      - Parameter textField: the text field whose `inputAccessoryView`'s button was tapped.
      */
-    optional func textFieldNavigationDidTapPreviousButton(textField: UITextField)
+    @objc optional func textFieldNavigationDidTapPreviousButton(_ textField: UITextField)
 
     /**
      Tells the `delegate` that the next button was tapped. The `delegate` has to make the `nextTextField` `becomeFirstResponder` if needed.
 
      - Parameter textField: the text field whose `inputAccessoryView`'s button was tapped.
      */
-    optional func textFieldNavigationDidTapNextButton(textField: UITextField)
+    @objc optional func textFieldNavigationDidTapNextButton(_ textField: UITextField)
 
     /**
      Tells the `delegate` that the done button was tapped. The `delegate` has to make the text field `resignFirstResponder` if needed.
 
      - Parameter textField: the text field whose `inputAccessoryView`'s button was tapped.
      */
-    optional func textFieldNavigationDidTapDoneButton(textField: UITextField)
+    @objc optional func textFieldNavigationDidTapDoneButton(_ textField: UITextField)
 }

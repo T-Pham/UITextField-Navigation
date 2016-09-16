@@ -54,11 +54,11 @@ public extension UITextField {
             inputAccessoryView = navigationToolbar
         }
 
-        textFieldNavigationToolbar?.previousButton.enabled = previousTextField != nil
-        textFieldNavigationToolbar?.nextButton.enabled = nextTextField != nil
+        textFieldNavigationToolbar?.previousButton.isEnabled = previousTextField != nil
+        textFieldNavigationToolbar?.nextButton.isEnabled = nextTextField != nil
     }
 
-    internal func storeTextField(textField: UITextField?, withKey key: UnsafePointer<Void>) {
+    internal func storeTextField(_ textField: UITextField?, withKey key: UnsafeRawPointer) {
         if let textField = textField {
             objc_setAssociatedObject(self, key, WeakObjectContainer(object: textField), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         } else {
@@ -66,7 +66,7 @@ public extension UITextField {
         }
     }
 
-    internal func retrieveTextField(key: UnsafePointer<Void>) -> UITextField? {
+    internal func retrieveTextField(_ key: UnsafeRawPointer) -> UITextField? {
         guard let weakObjectContainer = objc_getAssociatedObject(self, key) else {
             return nil
         }
@@ -79,24 +79,24 @@ public extension UITextField {
 }
 
 extension UITextField: UITextFieldNavigationToolbarDelegate {
-    func textFieldNavigationToolbarDidTapPreviousButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
-        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapPreviousButton {
+    func textFieldNavigationToolbarDidTapPreviousButton(_ textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
+        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, let method = navigationDelegate.textFieldNavigationDidTapPreviousButton {
             method(self)
         } else {
             previousTextField?.becomeFirstResponder()
         }
     }
 
-    func textFieldNavigationToolbarDidTapNextButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
-        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapNextButton {
+    func textFieldNavigationToolbarDidTapNextButton(_ textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
+        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, let method = navigationDelegate.textFieldNavigationDidTapNextButton {
             method(self)
         } else {
             nextTextField?.becomeFirstResponder()
         }
     }
 
-    func textFieldNavigationToolbarDidTapDoneButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
-        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, method = navigationDelegate.textFieldNavigationDidTapDoneButton {
+    func textFieldNavigationToolbarDidTapDoneButton(_ textFieldNavigationToolbar: UITextFieldNavigationToolbar) {
+        if let navigationDelegate = delegate as? UITextFieldNavigationDelegate, let method = navigationDelegate.textFieldNavigationDidTapDoneButton {
             method(self)
         } else {
             resignFirstResponder()

@@ -9,9 +9,9 @@
 import UIKit
 
 protocol UITextFieldNavigationToolbarDelegate: class {
-    func textFieldNavigationToolbarDidTapPreviousButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar)
-    func textFieldNavigationToolbarDidTapNextButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar)
-    func textFieldNavigationToolbarDidTapDoneButton(textFieldNavigationToolbar: UITextFieldNavigationToolbar)
+    func textFieldNavigationToolbarDidTapPreviousButton(_ textFieldNavigationToolbar: UITextFieldNavigationToolbar)
+    func textFieldNavigationToolbarDidTapNextButton(_ textFieldNavigationToolbar: UITextFieldNavigationToolbar)
+    func textFieldNavigationToolbarDidTapDoneButton(_ textFieldNavigationToolbar: UITextFieldNavigationToolbar)
 }
 
 /// Class for the `inputAccessoryView`.
@@ -33,22 +33,22 @@ public class UITextFieldNavigationToolbar: UIToolbar {
     }
 
     init() {
-        previousButton = UITextFieldNavigationToolbarButtonItem(title: " ❮ ", style: .Plain, target: nil, action: nil)
-        nextButton = UITextFieldNavigationToolbarButtonItem(title: " ❯ ", style: .Plain, target: nil, action: nil)
-        doneButton = UITextFieldNavigationToolbarButtonItem(title: " ▼ ", style: .Plain, target: nil, action: nil)
+        previousButton = UITextFieldNavigationToolbarButtonItem(title: " ❮ ", style: .plain, target: nil, action: nil)
+        nextButton = UITextFieldNavigationToolbarButtonItem(title: " ❯ ", style: .plain, target: nil, action: nil)
+        doneButton = UITextFieldNavigationToolbarButtonItem(title: " ▼ ", style: .plain, target: nil, action: nil)
 
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
 
-        previousButton.enabled = false
+        previousButton.isEnabled = false
         previousButton.target = self
         previousButton.action = #selector(previousButtonDidTap)
-        nextButton.enabled = false
+        nextButton.isEnabled = false
         nextButton.target = self
         nextButton.action = #selector(nextButtonDidTap)
         doneButton.target = self
         doneButton.action = #selector(doneButtonDidTap)
 
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         items = [previousButton, nextButton, flexibleSpace, doneButton]
         sizeToFit()
     }
