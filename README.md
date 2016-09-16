@@ -188,6 +188,21 @@ pod 'UITextField-Navigation'
 1. Download and drop [`/UITextField-Navigation/Classes`](/UITextField-Navigation/Classes) folder in your project.
 2. Congratulations!
 
+##Compatibility
+From version 2.0.0, Swift 3 syntax is used. If your project is still using Swift version 2, please use a UITextField-Navigation version prior to 2.0.0.
+
+Podfile
+
+```ruby
+pod 'UITextField-Navigation', '~> 1.4.3'
+```
+
+or Cartfile
+
+```ruby
+github "T-Pham/UITextField-Navigation" ~> 1.4.3
+```
+
 ## Apps that use UITextField-Navigation
 
 Hello fellow developers. I can see that the library has been adopted in some apps. If your app also uses the library, it would be great if you can share it here. Please add it to the list below. Thanks!
