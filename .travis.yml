@@ -3,7 +3,7 @@ language: objective-c
 cache: cocoapods
 podfile: Example/Podfile
 before_install:
-- gem install cocoapods --no-document
+- gem install cocoapods --pre --no-document
 - pod repo update
 - pod install --project-directory=Example
 script:
