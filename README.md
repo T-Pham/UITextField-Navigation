@@ -85,17 +85,17 @@ import UITextField_Navigation
 ...
 extension ViewController: UITextFieldNavigationDelegate { // explicitly protocol conforming declaration
 
-    func textFieldNavigationDidTapPreviousButton(textField: UITextField) {
+    func textFieldNavigationDidTapPreviousButton(_ textField: UITextField) {
         textField.previousTextField?.becomeFirstResponder()
         // your custom work
     }
 
-    func textFieldNavigationDidTapNextButton(textField: UITextField) {
+    func textFieldNavigationDidTapNextButton(_ textField: UITextField) {
         textField.nextTextField?.becomeFirstResponder()
         // your custom work
     }
 
-    func textFieldNavigationDidTapDoneButton(textField: UITextField) {
+    func textFieldNavigationDidTapDoneButton(_ textField: UITextField) {
         textField.resignFirstResponder()
         // your custom work
     }
@@ -138,9 +138,9 @@ extension ViewController: UITextFieldNavigationDelegate { // explicitly protocol
 Modify the appearance proxy of the `UITextFieldNavigationToolbar` and `UITextFieldNavigationToolbarButtonItem` classes to customize the navigation view's UI for all text fields.
 
 ```swift
-UITextFieldNavigationToolbar.appearance().barStyle = .Black
-UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purpleColor()
-UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.whiteColor()
+UITextFieldNavigationToolbar.appearance().barStyle = .black
+UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purple
+UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.white
 ```
 
 ![Screenshot 3](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot3.png?raw=true)
@@ -151,15 +151,15 @@ Alternatively, you can modify the UI directly on each navigation view by accessi
 
 ```swift
 ...
-textField.textFieldNavigationToolbar?.barStyle = .Default
-textField.textFieldNavigationToolbar?.backgroundColor = UIColor.redColor()
+textField.textFieldNavigationToolbar?.barStyle = .default
+textField.textFieldNavigationToolbar?.backgroundColor = UIColor.red
 textField.textFieldNavigationToolbar?.previousButton.title = "Previous"
 textField.textFieldNavigationToolbar?.nextButton.title = "Next"
 textField.textFieldNavigationToolbar?.doneButton.title = "Dismiss"
 
 // Add a custom button
-let customButton = UIBarButtonItem(title: "Custom", style: .Plain, target: nil, action: nil)
-let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+let customButton = UIBarButtonItem(title: "Custom", style: .plain, target: nil, action: nil)
+let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 textField.textFieldNavigationToolbar?.items = [textField.textFieldNavigationToolbar!.previousButton, textField.textFieldNavigationToolbar!.nextButton, customButton, flexibleSpace, textField.textFieldNavigationToolbar!.doneButton]
 ```
 
