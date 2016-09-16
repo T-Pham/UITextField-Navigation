@@ -1,22 +1,27 @@
 PODS:
-  - Nimble (3.2.0)
   - Quick (0.9.3)
   - UITextField-Navigation (1.4.3)
 
 DEPENDENCIES:
-  - Nimble (~> 3.0)
-  - Quick (~> 0.8)
+  - Quick (from `https://github.com/Quick/Quick.git`, branch `swift-3.0`)
   - UITextField-Navigation (from `../`)
 
 EXTERNAL SOURCES:
+  Quick:
+    :branch: swift-3.0
+    :git: https://github.com/Quick/Quick.git
   UITextField-Navigation:
     :path: ../
 
+CHECKOUT OPTIONS:
+  Quick:
+    :commit: 8f2bc636ecfa2cc20696f62548b38d4ab943e299
+    :git: https://github.com/Quick/Quick.git
+
 SPEC CHECKSUMS:
-  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
   UITextField-Navigation: 652290ee8c634ea9e6ada10abff5f2ffb3d5050e
 
-PODFILE CHECKSUM: 93fbdf34812c4565fc82fbc53bee6750aae2db1a
+PODFILE CHECKSUM: 6ae7cb214873fdf76cb06499d14e945509731cc7
 
 COCOAPODS: 1.0.1

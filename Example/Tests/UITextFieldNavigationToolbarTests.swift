@@ -7,7 +7,6 @@
 //
 
 import Quick
-import Nimble
 import UITextField_Navigation
 
 class UITextFieldNavigationToolbarTests: QuickSpec {
@@ -24,19 +23,19 @@ class UITextFieldNavigationToolbarTests: QuickSpec {
         describe("UITextFieldNavigationToolbar") {
 
             it("has the previousButton") {
-                expect(self.navigationToolbar.previousButton).to(beAKindOf(UITextFieldNavigationToolbarButtonItem))
+                XCTAssert(self.navigationToolbar.previousButton.isKind(of: UITextFieldNavigationToolbarButtonItem.self))
             }
 
             it("has the nextButton") {
-                expect(self.navigationToolbar.nextButton).to(beAKindOf(UITextFieldNavigationToolbarButtonItem))
+                XCTAssert(self.navigationToolbar.nextButton.isKind(of: UITextFieldNavigationToolbarButtonItem.self))
             }
 
             it("has the doneButton") {
-                expect(self.navigationToolbar.doneButton).to(beAKindOf(UITextFieldNavigationToolbarButtonItem))
+                XCTAssert(self.navigationToolbar.doneButton.isKind(of: UITextFieldNavigationToolbarButtonItem.self))
             }
 
             it("disables init with coder") {
-                expect(UITextFieldNavigationToolbar(coder: NSCoder())).to(beNil())
+                XCTAssertNil(UITextFieldNavigationToolbar(coder: NSCoder()))
             }
         }
     }

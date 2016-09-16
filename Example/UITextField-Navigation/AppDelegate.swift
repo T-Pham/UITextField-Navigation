@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        UITextFieldNavigationToolbar.appearance().barStyle = .Black
-        UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purpleColor()
-        UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.whiteColor()
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UITextFieldNavigationToolbar.appearance().barStyle = .black
+        UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purple
+        UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.white
         return true
     }
 }

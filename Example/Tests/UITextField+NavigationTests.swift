@@ -7,7 +7,6 @@
 //
 
 import Quick
-import Nimble
 import UITextField_Navigation
 
 class UITextField_NavigationTests: QuickSpec {
@@ -24,11 +23,11 @@ class UITextField_NavigationTests: QuickSpec {
             it("stores the next text field") {
                 let nextTextField = UITextField()
                 self.textField.nextTextField = nextTextField
-                expect(self.textField.nextTextField) == nextTextField
+                XCTAssertEqual(self.textField.nextTextField, nextTextField)
             }
 
             it("is nil at the beginning") {
-                expect(self.textField.nextTextField).to(beNil())
+                XCTAssertNil(self.textField.nextTextField)
             }
 
             it("removes the previous text field of the old next text field") {
@@ -36,20 +35,20 @@ class UITextField_NavigationTests: QuickSpec {
                 self.textField.nextTextField = oldNextTextField
                 let newNextTextField = UITextField()
                 self.textField.nextTextField = newNextTextField;
-                expect(oldNextTextField.previousTextField).to(beNil())
+                XCTAssertNil(oldNextTextField.previousTextField)
             }
 
             it("does not retain the next text field") {
                 autoreleasepool {
                     self.textField.nextTextField = UITextField()
                 }
-                expect(self.textField.nextTextField).to(beNil())
+                XCTAssertNil(self.textField.nextTextField)
             }
 
             it("updates the inputAccessoryView") {
                 let nextTextField = UITextField()
                 self.textField.nextTextField = nextTextField
-                expect(self.textField.inputAccessoryView).notTo(beNil())
+                XCTAssertNotNil(self.textField.inputAccessoryView)
             }
         }
 
@@ -58,11 +57,11 @@ class UITextField_NavigationTests: QuickSpec {
             it("stores the previous text field") {
                 let previousTextField = UITextField()
                 previousTextField.nextTextField = self.textField
-                expect(self.textField.previousTextField) == previousTextField
+                XCTAssertEqual(self.textField.previousTextField, previousTextField)
             }
 
             it("is nil at the beginning") {
-                expect(self.textField.previousTextField).to(beNil())
+                XCTAssertNil(self.textField.previousTextField)
             }
 
             it("does not retain the next text field") {
@@ -71,13 +70,13 @@ class UITextField_NavigationTests: QuickSpec {
                     previousTextField!.nextTextField = self.textField
                     previousTextField = nil;
                 }
-                expect(self.textField.previousTextField).to(beNil())
+                XCTAssertNil(self.textField.previousTextField)
             }
 
             it("updates the inputAccessoryView") {
                 let previousTextField = UITextField()
                 previousTextField.nextTextField = self.textField
-                expect(self.textField.inputAccessoryView).notTo(beNil())
+                XCTAssertNotNil(self.textField.inputAccessoryView)
             }
         }
 
@@ -86,16 +85,16 @@ class UITextField_NavigationTests: QuickSpec {
             it("returns the toolbar") {
                 let nextTextField = UITextField()
                 self.textField.nextTextField = nextTextField
-                expect(self.textField.textFieldNavigationToolbar).to(beAKindOf(UITextFieldNavigationToolbar))
+                XCTAssert(self.textField.textFieldNavigationToolbar!.isKind(of: UITextFieldNavigationToolbar.self))
             }
 
             it("is nil at the beginning") {
-                expect(self.textField.textFieldNavigationToolbar).to(beNil())
+                XCTAssertNil(self.textField.textFieldNavigationToolbar)
             }
 
             it("does not return custom inputAccessoryView") {
                 self.textField.inputAccessoryView = UIView()
-                expect(self.textField.textFieldNavigationToolbar).to(beNil())
+                XCTAssertNil(self.textField.textFieldNavigationToolbar)
             }
         }
 
@@ -103,14 +102,14 @@ class UITextField_NavigationTests: QuickSpec {
 
             it("creates the inputAccessoryView") {
                 self.textField.applyInputAccessoryView()
-                expect(self.textField.textFieldNavigationToolbar).notTo(beNil())
+                XCTAssertNotNil(self.textField.textFieldNavigationToolbar)
             }
 
             it("does not re-create the inputAccessoryView") {
                 self.textField.applyInputAccessoryView()
                 let inputAccessoryView = self.textField.inputAccessoryView
                 self.textField.applyInputAccessoryView()
-                expect(inputAccessoryView) == self.textField.inputAccessoryView
+                XCTAssertEqual(inputAccessoryView, self.textField.inputAccessoryView)
             }
         }
 
@@ -132,20 +131,20 @@ class UITextField_NavigationTests: QuickSpec {
 
                 it("calls the delegate method for the previous button") {
                     let previousButton = self.textField.textFieldNavigationToolbar!.previousButton
-                    previousButton.target!.performSelector(previousButton.action)
-                    expect(delegate.previousButtonTapped).to(beTrue())
+                    _ = previousButton.target!.perform(previousButton.action)
+                    XCTAssert(delegate.previousButtonTapped)
                 }
 
                 it("calls the delegate method for the next button") {
                     let nextButton = self.textField.textFieldNavigationToolbar!.nextButton
-                    nextButton.target!.performSelector(nextButton.action)
-                    expect(delegate.nextButtonTapped).to(beTrue())
+                    _ = nextButton.target!.perform(nextButton.action)
+                    XCTAssert(delegate.nextButtonTapped)
                 }
 
                 it("calls the delegate method for the done button") {
                     let doneButton = self.textField.textFieldNavigationToolbar!.doneButton
-                    doneButton.target!.performSelector(doneButton.action)
-                    expect(delegate.doneButtonTapped).to(beTrue())
+                    _ = doneButton.target!.perform(doneButton.action)
+                    XCTAssert(delegate.doneButtonTapped)
                 }
             }
 
@@ -167,20 +166,20 @@ class UITextField_NavigationTests: QuickSpec {
 
                 it("performs the default behavior when tapping the previous button") {
                     let previousButton = textField.textFieldNavigationToolbar!.previousButton
-                    previousButton.target!.performSelector(previousButton.action)
-                    expect(previousTextField.becomeFirstResponderPerformed).to(beTrue())
+                    _ = previousButton.target!.perform(previousButton.action)
+                    XCTAssert(previousTextField.becomeFirstResponderPerformed)
                 }
 
                 it("performs the default behavior when tapping the next button") {
                     let nextButton = textField.textFieldNavigationToolbar!.nextButton
-                    nextButton.target!.performSelector(nextButton.action)
-                    expect(nextTextField.becomeFirstResponderPerformed).to(beTrue())
+                    _ = nextButton.target!.perform(nextButton.action)
+                    XCTAssert(nextTextField.becomeFirstResponderPerformed)
                 }
 
                 it("performs the default behavior when tapping the done button") {
                     let doneButton = textField.textFieldNavigationToolbar!.doneButton
-                    doneButton.target!.performSelector(doneButton.action)
-                    expect(textField.resignFirstResponderPerformed).to(beTrue())
+                    _ = doneButton.target!.perform(doneButton.action)
+                    XCTAssert(textField.resignFirstResponderPerformed)
                 }
             }
         }

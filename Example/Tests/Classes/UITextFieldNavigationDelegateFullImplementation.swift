@@ -14,15 +14,15 @@ class UITextFieldNavigationDelegateFullImplementation: NSObject, UITextFieldNavi
     var nextButtonTapped = false
     var doneButtonTapped = false
 
-    @objc func textFieldNavigationDidTapPreviousButton(textField: UITextField) {
+    @objc func textFieldNavigationDidTapPreviousButton(_ textField: UITextField) {
         previousButtonTapped = true
     }
 
-    @objc func textFieldNavigationDidTapNextButton(textField: UITextField) {
+    @objc func textFieldNavigationDidTapNextButton(_ textField: UITextField) {
         nextButtonTapped = true
     }
 
-    @objc func textFieldNavigationDidTapDoneButton(textField: UITextField) {
+    @objc func textFieldNavigationDidTapDoneButton(_ textField: UITextField) {
         doneButtonTapped = true
     }
 }

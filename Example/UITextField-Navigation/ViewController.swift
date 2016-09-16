@@ -29,49 +29,49 @@ class ViewController: UIViewController {
         textFieldCode2.nextTextField = textFieldCode3
 
         textFieldCode2.delegate = self
-        textFieldCode2.textFieldNavigationToolbar?.barStyle = .Default
-        textFieldCode2.textFieldNavigationToolbar?.backgroundColor = UIColor.redColor()
+        textFieldCode2.textFieldNavigationToolbar?.barStyle = .default
+        textFieldCode2.textFieldNavigationToolbar?.backgroundColor = UIColor.red
         textFieldCode2.textFieldNavigationToolbar?.previousButton.title = "Previous"
         textFieldCode2.textFieldNavigationToolbar?.nextButton.title = "Next"
         textFieldCode2.textFieldNavigationToolbar?.doneButton.title = "Dismiss"
 
-        let customButton = UIBarButtonItem(title: "Custom", style: .Plain, target: nil, action: nil)
-        customButton.tintColor = UIColor.whiteColor()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let customButton = UIBarButtonItem(title: "Custom", style: .plain, target: nil, action: nil)
+        customButton.tintColor = UIColor.white
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         textFieldCode2.textFieldNavigationToolbar?.items = [textFieldCode2.textFieldNavigationToolbar!.previousButton, textFieldCode2.textFieldNavigationToolbar!.nextButton, customButton, flexibleSpace, textFieldCode2.textFieldNavigationToolbar!.doneButton]
     }
 
-    func createRightTextField(placeholder: String, leftTextField: UITextField) -> UITextField {
+    func createRightTextField(_ placeholder: String, leftTextField: UITextField) -> UITextField {
         let textField = UITextField()
-        textField.borderStyle = .RoundedRect
+        textField.borderStyle = .roundedRect
         textField.font = leftTextField.font
         textField.placeholder = placeholder
         textField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textField)
-        view.addConstraints([NSLayoutConstraint(item: textField, attribute: .Width, relatedBy: .Equal, toItem: leftTextField, attribute: .Width, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .CenterY, relatedBy: .Equal, toItem: leftTextField, attribute: .CenterY, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .Left, relatedBy: .Equal, toItem: leftTextField, attribute: .Right, multiplier: 1, constant: 15)])
+        view.addConstraints([NSLayoutConstraint(item: textField, attribute: .width, relatedBy: .equal, toItem: leftTextField, attribute: .width, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .centerY, relatedBy: .equal, toItem: leftTextField, attribute: .centerY, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .left, relatedBy: .equal, toItem: leftTextField, attribute: .right, multiplier: 1, constant: 15)])
         return textField
     }
 }
 
 extension ViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         print("textFieldDidBeginEditing: \(textField.placeholder)")
     }
 }
 
 extension ViewController: UITextFieldNavigationDelegate {
 
-    func textFieldNavigationDidTapPreviousButton(textField: UITextField) {
+    func textFieldNavigationDidTapPreviousButton(_ textField: UITextField) {
         print("textFieldNavigationDidTapPreviousButton: \(textField.placeholder)")
         textField.previousTextField?.becomeFirstResponder()
     }
 
-    func textFieldNavigationDidTapNextButton(textField: UITextField) {
+    func textFieldNavigationDidTapNextButton(_ textField: UITextField) {
         print("textFieldNavigationDidTapNextButton: \(textField.placeholder)")
         textField.nextTextField?.becomeFirstResponder()
     }
 
-    func textFieldNavigationDidTapDoneButton(textField: UITextField) {
+    func textFieldNavigationDidTapDoneButton(_ textField: UITextField) {
         print("textFieldNavigationDidTapDoneButton: \(textField.placeholder)")
         textField.resignFirstResponder()
     }

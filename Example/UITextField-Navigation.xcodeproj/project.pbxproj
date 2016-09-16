@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B0176191D1EF71F00F38C56 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0176181D1EF71F00F38C56 /* ObjectiveCViewController.m */; };
 		1B07FA101D16EE770033E592 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B07FA0F1D16EE770033E592 /* .gitignore */; };
-		1B5291DC1D7BEFDD00BAE977 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5291DB1D7BEFDD00BAE977 /* Package.swift */; };
+		1B2A306B1D8C5383009779A2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2A306A1D8C5383009779A2 /* Quick.framework */; };
 		1B64F2FD1D197F220045F0C5 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1B64F2FC1D197F220045F0C5 /* .travis.yml */; };
 		1BE2D27C1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D27B1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift */; };
 		1BE2D27F1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D27E1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift */; };
@@ -31,6 +31,7 @@
 		1B0176171D1EF71F00F38C56 /* ObjectiveCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCViewController.h; sourceTree = "<group>"; };
 		1B0176181D1EF71F00F38C56 /* ObjectiveCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCViewController.m; sourceTree = "<group>"; };
 		1B07FA0F1D16EE770033E592 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		1B2A306A1D8C5383009779A2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Pods/../build/Debug-iphoneos/Quick/Quick.framework"; sourceTree = "<group>"; };
 		1B5291DB1D7BEFDD00BAE977 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		1B64F2FC1D197F220045F0C5 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		1BDE1EC61D17A254007535C7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2A306B1D8C5383009779A2 /* Quick.framework in Frameworks */,
 				CF8E2B5AF9BA6A500DF61F20 /* Pods_UITextField_Navigation_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +93,7 @@
 		1D151E2DFCC2436AF28C41F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B2A306A1D8C5383009779A2 /* Quick.framework */,
 				8876037254C92606841A7851 /* Pods_UITextField_Navigation_Example.framework */,
 				93B0E7D865823BD2C4EF88B1 /* Pods_UITextField_Navigation_Tests.framework */,
 			);
@@ -237,14 +240,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -388,7 +393,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B5291DC1D7BEFDD00BAE977 /* Package.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				1B0176191D1EF71F00F38C56 /* ObjectiveCViewController.m in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -442,8 +446,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -487,8 +493,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -507,6 +515,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -515,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C38AC293AA45DCF1A2439FEF /* Pods-UITextField-Navigation_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "UITextField-Navigation/Info.plist";
@@ -524,6 +534,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UITextField-Navigation/UITextField-Navigation_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -531,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7088DCBF300B77EA2394D245 /* Pods-UITextField-Navigation_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "UITextField-Navigation/Info.plist";
@@ -539,6 +551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UITextField-Navigation/UITextField-Navigation_Example-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -546,10 +559,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A944379C6F4C74E581ABED47 /* Pods-UITextField_Navigation_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -558,6 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -565,14 +576,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39ABC9A49F54AB19257732E4 /* Pods-UITextField_Navigation_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
