@@ -188,7 +188,7 @@ pod 'UITextField-Navigation'
 1. Download and drop [`/UITextField-Navigation/Classes`](/UITextField-Navigation/Classes) folder in your project.
 2. Congratulations!
 
-##Compatibility
+## Compatibility
 From version 2.0.0, Swift 3 syntax is used. If your project is still using Swift version 2, please use a UITextField-Navigation version prior to 2.0.0.
 
 Podfile
