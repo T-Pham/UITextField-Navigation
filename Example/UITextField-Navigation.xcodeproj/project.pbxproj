@@ -34,6 +34,7 @@
 		1B2A306A1D8C5383009779A2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Pods/../build/Debug-iphoneos/Quick/Quick.framework"; sourceTree = "<group>"; };
 		1B5291DB1D7BEFDD00BAE977 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		1B64F2FC1D197F220045F0C5 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		1B7152FE1D8CEB740076B48D /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		1BDE1EC61D17A254007535C7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		1BE2D27B1D251AEC0000E03E /* UITextFieldNavigationToolbarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbarTests.swift; sourceTree = "<group>"; };
 		1BE2D27E1D2539580000E03E /* UITextFieldNavigationDelegateFullImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationDelegateFullImplementation.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 			children = (
 				1B64F2FC1D197F220045F0C5 /* .travis.yml */,
 				1B07FA0F1D16EE770033E592 /* .gitignore */,
+				1B7152FE1D8CEB740076B48D /* .swift-version */,
 				1B5291DB1D7BEFDD00BAE977 /* Package.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for UITextField-Navigation */,
