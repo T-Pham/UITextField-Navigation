@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B9928A71E4D606F00C374CF /* NavigationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9928A61E4D606F00C374CF /* NavigationField.swift */; };
+		1B9928A91E4D71DF00C374CF /* NavigationFieldImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9928A81E4D71DF00C374CF /* NavigationFieldImplementations.swift */; };
+		1B9928AB1E4D736100C374CF /* NavigationFieldInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9928AA1E4D736100C374CF /* NavigationFieldInternal.swift */; };
+		1B9928AD1E4D749200C374CF /* NavigationFieldToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9928AC1E4D749200C374CF /* NavigationFieldToolbar.swift */; };
+		1B9928AF1E4D75DC00C374CF /* NavigationFieldToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9928AE1E4D75DC00C374CF /* NavigationFieldToolbarButtonItem.swift */; };
 		1BFB78E81D3F690F009185E4 /* UITextField-Navigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BFB78E71D3F690F009185E4 /* UITextField-Navigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BFB78F51D3F6947009185E4 /* UITextField+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB78F01D3F6947009185E4 /* UITextField+Navigation.swift */; };
-		1BFB78F61D3F6947009185E4 /* UITextFieldNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB78F11D3F6947009185E4 /* UITextFieldNavigationDelegate.swift */; };
-		1BFB78F71D3F6947009185E4 /* UITextFieldNavigationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB78F21D3F6947009185E4 /* UITextFieldNavigationToolbar.swift */; };
-		1BFB78F81D3F6947009185E4 /* UITextFieldNavigationToolbarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB78F31D3F6947009185E4 /* UITextFieldNavigationToolbarButtonItem.swift */; };
 		1BFB78F91D3F6947009185E4 /* WeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB78F41D3F6947009185E4 /* WeakObjectContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B9928A61E4D606F00C374CF /* NavigationField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationField.swift; sourceTree = "<group>"; };
+		1B9928A81E4D71DF00C374CF /* NavigationFieldImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFieldImplementations.swift; sourceTree = "<group>"; };
+		1B9928AA1E4D736100C374CF /* NavigationFieldInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFieldInternal.swift; sourceTree = "<group>"; };
+		1B9928AC1E4D749200C374CF /* NavigationFieldToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFieldToolbar.swift; sourceTree = "<group>"; };
+		1B9928AE1E4D75DC00C374CF /* NavigationFieldToolbarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFieldToolbarButtonItem.swift; sourceTree = "<group>"; };
 		1BFB78E41D3F690F009185E4 /* UITextField_Navigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITextField_Navigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFB78E71D3F690F009185E4 /* UITextField-Navigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation.h"; sourceTree = "<group>"; };
 		1BFB78E91D3F690F009185E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BFB78F01D3F6947009185E4 /* UITextField+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Navigation.swift"; sourceTree = "<group>"; };
-		1BFB78F11D3F6947009185E4 /* UITextFieldNavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationDelegate.swift; sourceTree = "<group>"; };
-		1BFB78F21D3F6947009185E4 /* UITextFieldNavigationToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbar.swift; sourceTree = "<group>"; };
-		1BFB78F31D3F6947009185E4 /* UITextFieldNavigationToolbarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldNavigationToolbarButtonItem.swift; sourceTree = "<group>"; };
 		1BFB78F41D3F6947009185E4 /* WeakObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakObjectContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,10 +68,11 @@
 		1BFB78EF1D3F6947009185E4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1BFB78F01D3F6947009185E4 /* UITextField+Navigation.swift */,
-				1BFB78F11D3F6947009185E4 /* UITextFieldNavigationDelegate.swift */,
-				1BFB78F21D3F6947009185E4 /* UITextFieldNavigationToolbar.swift */,
-				1BFB78F31D3F6947009185E4 /* UITextFieldNavigationToolbarButtonItem.swift */,
+				1B9928A61E4D606F00C374CF /* NavigationField.swift */,
+				1B9928A81E4D71DF00C374CF /* NavigationFieldImplementations.swift */,
+				1B9928AA1E4D736100C374CF /* NavigationFieldInternal.swift */,
+				1B9928AC1E4D749200C374CF /* NavigationFieldToolbar.swift */,
+				1B9928AE1E4D75DC00C374CF /* NavigationFieldToolbarButtonItem.swift */,
 				1BFB78F41D3F6947009185E4 /* WeakObjectContainer.swift */,
 			);
 			path = Classes;
@@ -154,11 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BFB78F81D3F6947009185E4 /* UITextFieldNavigationToolbarButtonItem.swift in Sources */,
+				1B9928AB1E4D736100C374CF /* NavigationFieldInternal.swift in Sources */,
 				1BFB78F91D3F6947009185E4 /* WeakObjectContainer.swift in Sources */,
-				1BFB78F71D3F6947009185E4 /* UITextFieldNavigationToolbar.swift in Sources */,
-				1BFB78F61D3F6947009185E4 /* UITextFieldNavigationDelegate.swift in Sources */,
-				1BFB78F51D3F6947009185E4 /* UITextField+Navigation.swift in Sources */,
+				1B9928A71E4D606F00C374CF /* NavigationField.swift in Sources */,
+				1B9928AF1E4D75DC00C374CF /* NavigationFieldToolbarButtonItem.swift in Sources */,
+				1B9928A91E4D71DF00C374CF /* NavigationFieldImplementations.swift in Sources */,
+				1B9928AD1E4D749200C374CF /* NavigationFieldToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
