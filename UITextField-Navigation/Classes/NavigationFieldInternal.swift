@@ -14,38 +14,28 @@ var PreviousNavigationFieldKey: Int8 = 0
 
 protocol NavigationFieldInternal: NavigationField, NavigationFieldToolbarDelegate {
 
-    weak var internal_navigationFieldDelegate: NavigationFieldDelegate? { get set }
+    var internal_delegate: AnyObject? { get }
     weak var internal_nextNavigationField: NavigationField? { get set }
     weak var internal_previousNavigationField: NavigationField? { get set }
 
     func internal_applyInputAccessoryView()
 
-    func storeObject(_ object: AnyObject?, key: UnsafeRawPointer)
-    func retrieveObject(key: UnsafeRawPointer) -> AnyObject?
+    func storeNavigationField(_ navigationField: NavigationField?, key: UnsafeRawPointer)
+    func retrieveNavigationField(key: UnsafeRawPointer) -> NavigationField?
 }
 
 extension NavigationFieldInternal {
 
-    weak var internal_navigationFieldDelegate: NavigationFieldDelegate? {
-        get {
-            return retrieveObject(key: &NavigationFieldDelegateKey) as? NavigationFieldDelegate
-        }
-
-        set {
-            storeObject(newValue, key: &NavigationFieldDelegateKey)
-        }
-    }
-
     weak var internal_nextNavigationField: NavigationField? {
         get {
-            return retrieveObject(key: &NextNavigationFieldKey) as? NavigationField
+            return retrieveNavigationField(key: &NextNavigationFieldKey)
         }
 
         set {
             if let navigationFieldInternal = nextNavigationField as? NavigationFieldInternal {
                 navigationFieldInternal.internal_previousNavigationField = nil
             }
-            storeObject(newValue, key: &NextNavigationFieldKey)
+            storeNavigationField(newValue, key: &NextNavigationFieldKey)
             applyInputAccessoryView()
             if let newValue = newValue as? NavigationFieldInternal {
                 newValue.internal_previousNavigationField = self
@@ -55,17 +45,17 @@ extension NavigationFieldInternal {
 
     weak var internal_previousNavigationField: NavigationField? {
         get {
-            return retrieveObject(key: &PreviousNavigationFieldKey) as? NavigationField
+            return retrieveNavigationField(key: &PreviousNavigationFieldKey)
         }
 
         set {
-            storeObject(newValue, key: &PreviousNavigationFieldKey)
+            storeNavigationField(newValue, key: &PreviousNavigationFieldKey)
             applyInputAccessoryView()
         }
     }
 
     func navigationFieldToolbarDidTapPreviousButton(_ navigationFieldToolbar: NavigationFieldToolbar) {
-        if let navigationFieldDelegate = navigationFieldDelegate, let method = navigationFieldDelegate.navigationFieldDidTapPreviousButton {
+        if let navigationFieldDelegate = internal_delegate as? NavigationFieldDelegate, let method = navigationFieldDelegate.navigationFieldDidTapPreviousButton {
             method(self)
         } else {
             previousNavigationField?.becomeFirstResponder()
@@ -73,7 +63,7 @@ extension NavigationFieldInternal {
     }
 
     func navigationFieldToolbarDidTapNextButton(_ navigationFieldToolbar: NavigationFieldToolbar) {
-        if let navigationFieldDelegate = navigationFieldDelegate, let method = navigationFieldDelegate.navigationFieldDidTapNextButton {
+        if let navigationFieldDelegate = internal_delegate as? NavigationFieldDelegate, let method = navigationFieldDelegate.navigationFieldDidTapNextButton {
             method(self)
         } else {
             nextNavigationField?.becomeFirstResponder()
@@ -81,7 +71,7 @@ extension NavigationFieldInternal {
     }
 
     func navigationFieldToolbarDidTapDoneButton(_ navigationFieldToolbar: NavigationFieldToolbar) {
-        if let navigationFieldDelegate = navigationFieldDelegate, let method = navigationFieldDelegate.navigationFieldDidTapDoneButton {
+        if let navigationFieldDelegate = internal_delegate as? NavigationFieldDelegate, let method = navigationFieldDelegate.navigationFieldDidTapDoneButton {
             method(self)
         } else {
             resignFirstResponder()
@@ -99,25 +89,36 @@ extension NavigationFieldInternal {
         navigationFieldToolbar?.nextButton.isEnabled = nextNavigationField != nil
     }
 
-    func storeObject(_ object: AnyObject?, key: UnsafeRawPointer) {
-        if let object = object {
-            objc_setAssociatedObject(self, key, WeakObjectContainer(object: object), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    func storeNavigationField(_ navigationField: NavigationField?, key: UnsafeRawPointer) {
+        if let navigationField = navigationField {
+            objc_setAssociatedObject(self, key, WeakObjectContainer(object: navigationField), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         } else {
             objc_setAssociatedObject(self, key, nil, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 
-    func retrieveObject(key: UnsafeRawPointer) -> AnyObject? {
+    func retrieveNavigationField(key: UnsafeRawPointer) -> NavigationField? {
         guard let weakObjectContainer = objc_getAssociatedObject(self, key) else {
             return nil
         }
-        guard let object = (weakObjectContainer as? WeakObjectContainer)?.object else {
-            storeObject(nil, key: key)
+        guard let navigationField = (weakObjectContainer as? WeakObjectContainer)?.object as? NavigationField else {
+            storeNavigationField(nil, key: key)
             return nil
         }
-        return object
+        return navigationField
     }
 }
 
-extension UITextView: NavigationFieldInternal {}
-extension UITextField: NavigationFieldInternal {}
+extension UITextView: NavigationFieldInternal {
+
+    var internal_delegate: AnyObject? {
+        return delegate
+    }
+}
+
+extension UITextField: NavigationFieldInternal {
+
+    var internal_delegate: AnyObject? {
+        return delegate
+    }
+}

@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-535" y="195"/>
         </scene>
-        <!--Navigation Field Delegate-->
+        <!--Swift-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="UITextField_Navigation_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,6 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="YLl-qs-4d1"/>
-                                    <outlet property="navigationFieldDelegate" destination="vXZ-lx-hvc" id="27a-2I-v7V"/>
                                     <outlet property="nextNavigationField" destination="UDe-sO-4Mb" id="7Bg-Ss-IZR"/>
                                 </connections>
                             </textField>
@@ -92,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="247" y="195"/>
         </scene>
-        <!--Navigation Field Delegate-->
+        <!--Objective-C-->
         <scene sceneID="gU1-5h-0HR">
             <objects>
                 <viewController id="1fR-K8-t7t" customClass="ObjectiveCViewController" sceneMemberID="viewController">
@@ -118,7 +117,6 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="1fR-K8-t7t" id="6TI-8Q-iSd"/>
-                                    <outlet property="navigationFieldDelegate" destination="1fR-K8-t7t" id="oJy-I1-KpP"/>
                                     <outlet property="nextNavigationField" destination="Zwe-IA-H66" id="mgw-UL-QY7"/>
                                 </connections>
                             </textField>

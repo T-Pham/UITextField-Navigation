@@ -32,11 +32,8 @@ import UIKit
     @objc optional func navigationFieldDidTapDoneButton(_ navigationField: NavigationField)
 }
 
-extension NSObject: NavigationFieldDelegate {}
-
 @objc public protocol NavigationField {
 
-    weak var navigationFieldDelegate: NavigationFieldDelegate? { get set }
     weak var nextNavigationField: NavigationField? { get set }
     weak var previousNavigationField: NavigationField? { get }
     var navigationFieldToolbar: NavigationFieldToolbar? { get }

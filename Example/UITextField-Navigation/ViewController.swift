@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         textFieldCode2.nextNavigationField = textFieldCode3
 
         textFieldCode2.delegate = self
-        textFieldCode2.navigationFieldDelegate = self
         textFieldCode2.navigationFieldToolbar?.barStyle = .default
         textFieldCode2.navigationFieldToolbar?.backgroundColor = UIColor.red
         textFieldCode2.navigationFieldToolbar?.previousButton.title = "Previous"
@@ -60,7 +59,7 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-extension ViewController {
+extension ViewController: NavigationFieldDelegate {
 
     func navigationFieldDidTapPreviousButton(_ navigationField: NavigationField) {
         print("navigationFieldDidTapPreviousButton: \(navigationField)")

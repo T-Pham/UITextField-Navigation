@@ -9,7 +9,7 @@
 @import UITextField_Navigation;
 #import "ObjectiveCViewController.h"
 
-@interface ObjectiveCViewController () <UITextFieldDelegate>
+@interface ObjectiveCViewController () <UITextFieldDelegate, NavigationFieldDelegate>
 
 @property (nonatomic) IBOutlet UITextField *textFieldIB1;
 @property (nonatomic) IBOutlet UITextField *textFieldIB2;
@@ -34,7 +34,6 @@
     _textFieldCode2.nextNavigationField = _textFieldCode3;
 
     _textFieldCode2.delegate = self;
-    _textFieldCode2.navigationFieldDelegate = self;
     _textFieldCode2.navigationFieldToolbar.barStyle = UIBarStyleDefault;
     _textFieldCode2.navigationFieldToolbar.backgroundColor = [UIColor redColor];
     _textFieldCode2.navigationFieldToolbar.previousButton.title = @"Previous";
