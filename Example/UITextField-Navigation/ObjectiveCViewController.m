@@ -9,7 +9,7 @@
 @import UITextField_Navigation;
 #import "ObjectiveCViewController.h"
 
-@interface ObjectiveCViewController () <UITextFieldNavigationDelegate>
+@interface ObjectiveCViewController () <UITextFieldDelegate>
 
 @property (nonatomic) IBOutlet UITextField *textFieldIB1;
 @property (nonatomic) IBOutlet UITextField *textFieldIB2;
@@ -29,21 +29,22 @@
     _textFieldCode2 = [self createRightTextFieldWithPlaceholder:@"UITextField Code 2" leftTextField:_textFieldIB2];
     _textFieldCode3 = [self createRightTextFieldWithPlaceholder:@"UITextField Code 3" leftTextField:_textFieldIB3];
 
-    _textFieldIB3.nextTextField = _textFieldCode1;
-    _textFieldCode1.nextTextField = _textFieldCode2;
-    _textFieldCode2.nextTextField = _textFieldCode3;
+    _textFieldIB3.nextNavigationField = _textFieldCode1;
+    _textFieldCode1.nextNavigationField = _textFieldCode2;
+    _textFieldCode2.nextNavigationField = _textFieldCode3;
 
     _textFieldCode2.delegate = self;
-    _textFieldCode2.textFieldNavigationToolbar.barStyle = UIBarStyleDefault;
-    _textFieldCode2.textFieldNavigationToolbar.backgroundColor = [UIColor redColor];
-    _textFieldCode2.textFieldNavigationToolbar.previousButton.title = @"Previous";
-    _textFieldCode2.textFieldNavigationToolbar.nextButton.title = @"Next";
-    _textFieldCode2.textFieldNavigationToolbar.doneButton.title = @"Dismiss";
+    _textFieldCode2.navigationFieldDelegate = self;
+    _textFieldCode2.navigationFieldToolbar.barStyle = UIBarStyleDefault;
+    _textFieldCode2.navigationFieldToolbar.backgroundColor = [UIColor redColor];
+    _textFieldCode2.navigationFieldToolbar.previousButton.title = @"Previous";
+    _textFieldCode2.navigationFieldToolbar.nextButton.title = @"Next";
+    _textFieldCode2.navigationFieldToolbar.doneButton.title = @"Dismiss";
 
     UIBarButtonItem *customButton = [[UIBarButtonItem alloc] initWithTitle:@"Custom" style:UIBarButtonItemStylePlain target:nil action:nil];
     customButton.tintColor = [UIColor whiteColor];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    _textFieldCode2.textFieldNavigationToolbar.items = @[_textFieldCode2.textFieldNavigationToolbar.previousButton, _textFieldCode2.textFieldNavigationToolbar.nextButton, customButton, flexibleSpace, _textFieldCode2.textFieldNavigationToolbar.doneButton];
+    _textFieldCode2.navigationFieldToolbar.items = @[_textFieldCode2.navigationFieldToolbar.previousButton, _textFieldCode2.navigationFieldToolbar.nextButton, customButton, flexibleSpace, _textFieldCode2.navigationFieldToolbar.doneButton];
 }
 
 - (UITextField *)createRightTextFieldWithPlaceholder:(NSString *)placeholder leftTextField:(UITextField *)letTextField {
@@ -63,21 +64,21 @@
     NSLog(@"textFieldDidBeginEditing: %@", textField.placeholder);
 }
 
-#pragma mark - UITextFieldNavigationDelegate
+#pragma mark - NavigationFieldDelegate
 
-- (void)textFieldNavigationDidTapPreviousButton:(UITextField *)textField {
-    NSLog(@"textFieldNavigationDidTapPreviousButton: %@", textField.placeholder);
-    [textField.previousTextField becomeFirstResponder];
+- (void)navigationFieldDidTapPreviousButton:(id<NavigationField>)navigationField {
+    NSLog(@"navigationFieldDidTapPreviousButton: %@", navigationField);
+    [navigationField.previousNavigationField becomeFirstResponder];
 }
 
-- (void)textFieldNavigationDidTapNextButton:(UITextField *)textField {
-    NSLog(@"textFieldNavigationDidTapNextButton: %@", textField.placeholder);
-    [textField.nextTextField becomeFirstResponder];
+- (void)navigationFieldDidTapNextButton:(id<NavigationField>)navigationField {
+    NSLog(@"navigationFieldDidTapNextButton: %@", navigationField);
+    [navigationField.nextNavigationField becomeFirstResponder];
 }
 
-- (void)textFieldNavigationDidTapDoneButton:(UITextField *)textField {
-    NSLog(@"textFieldNavigationDidTapDoneButton: %@", textField.placeholder);
-    [textField resignFirstResponder];
+- (void)navigationFieldDidTapDoneButton:(id<NavigationField>)navigationField {
+    NSLog(@"navigationFieldDidTapDoneButton: %@", navigationField);
+    [navigationField resignFirstResponder];
 }
 
 @end

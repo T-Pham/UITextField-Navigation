@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        UITextFieldNavigationToolbar.appearance().barStyle = .black
-        UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purple
-        UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.white
+        NavigationFieldToolbar.appearance().barStyle = .black
+        NavigationFieldToolbar.appearance().backgroundColor = UIColor.purple
+        NavigationFieldToolbarButtonItem.appearance().tintColor = UIColor.white
         return true
     }
 }

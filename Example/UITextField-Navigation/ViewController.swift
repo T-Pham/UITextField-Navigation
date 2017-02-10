@@ -24,21 +24,22 @@ class ViewController: UIViewController {
         textFieldCode2 = createRightTextField("UITextField Code 2", leftTextField: textFieldIB2)
         textFieldCode3 = createRightTextField("UITextField Code 3", leftTextField: textFieldIB3)
 
-        textFieldIB3.nextTextField = textFieldCode1
-        textFieldCode1.nextTextField = textFieldCode2
-        textFieldCode2.nextTextField = textFieldCode3
+        textFieldIB3.nextNavigationField = textFieldCode1
+        textFieldCode1.nextNavigationField = textFieldCode2
+        textFieldCode2.nextNavigationField = textFieldCode3
 
         textFieldCode2.delegate = self
-        textFieldCode2.textFieldNavigationToolbar?.barStyle = .default
-        textFieldCode2.textFieldNavigationToolbar?.backgroundColor = UIColor.red
-        textFieldCode2.textFieldNavigationToolbar?.previousButton.title = "Previous"
-        textFieldCode2.textFieldNavigationToolbar?.nextButton.title = "Next"
-        textFieldCode2.textFieldNavigationToolbar?.doneButton.title = "Dismiss"
+        textFieldCode2.navigationFieldDelegate = self
+        textFieldCode2.navigationFieldToolbar?.barStyle = .default
+        textFieldCode2.navigationFieldToolbar?.backgroundColor = UIColor.red
+        textFieldCode2.navigationFieldToolbar?.previousButton.title = "Previous"
+        textFieldCode2.navigationFieldToolbar?.nextButton.title = "Next"
+        textFieldCode2.navigationFieldToolbar?.doneButton.title = "Dismiss"
 
         let customButton = UIBarButtonItem(title: "Custom", style: .plain, target: nil, action: nil)
         customButton.tintColor = UIColor.white
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        textFieldCode2.textFieldNavigationToolbar?.items = [textFieldCode2.textFieldNavigationToolbar!.previousButton, textFieldCode2.textFieldNavigationToolbar!.nextButton, customButton, flexibleSpace, textFieldCode2.textFieldNavigationToolbar!.doneButton]
+        textFieldCode2.navigationFieldToolbar?.items = [textFieldCode2.navigationFieldToolbar!.previousButton, textFieldCode2.navigationFieldToolbar!.nextButton, customButton, flexibleSpace, textFieldCode2.navigationFieldToolbar!.doneButton]
     }
 
     func createRightTextField(_ placeholder: String, leftTextField: UITextField) -> UITextField {
@@ -59,20 +60,20 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-extension ViewController: UITextFieldNavigationDelegate {
+extension ViewController {
 
-    func textFieldNavigationDidTapPreviousButton(_ textField: UITextField) {
-        print("textFieldNavigationDidTapPreviousButton: \(textField.placeholder)")
-        textField.previousTextField?.becomeFirstResponder()
+    func navigationFieldDidTapPreviousButton(_ navigationField: NavigationField) {
+        print("navigationFieldDidTapPreviousButton: \(navigationField)")
+        navigationField.previousNavigationField?.becomeFirstResponder()
     }
 
-    func textFieldNavigationDidTapNextButton(_ textField: UITextField) {
-        print("textFieldNavigationDidTapNextButton: \(textField.placeholder)")
-        textField.nextTextField?.becomeFirstResponder()
+    func navigationFieldDidTapNextButton(_ navigationField: NavigationField) {
+        print("navigationFieldDidTapNextButton: \(navigationField)")
+        navigationField.nextNavigationField?.becomeFirstResponder()
     }
 
-    func textFieldNavigationDidTapDoneButton(_ textField: UITextField) {
-        print("textFieldNavigationDidTapDoneButton: \(textField.placeholder)")
-        textField.resignFirstResponder()
+    func navigationFieldDidTapDoneButton(_ navigationField: NavigationField) {
+        print("navigationFieldDidTapDoneButton: \(navigationField)")
+        navigationField.resignFirstResponder()
     }
 }
