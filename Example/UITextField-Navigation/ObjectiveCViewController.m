@@ -12,7 +12,7 @@
 @interface ObjectiveCViewController () <UITextFieldDelegate, NavigationFieldDelegate>
 
 @property (nonatomic) IBOutlet UITextField *textFieldIB1;
-@property (nonatomic) IBOutlet UITextField *textFieldIB2;
+@property (nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic) IBOutlet UITextField *textFieldIB3;
 @property (nonatomic) UITextField *textFieldCode1;
 @property (nonatomic) UITextField *textFieldCode2;
@@ -26,7 +26,7 @@
     [super viewDidLoad];
 
     _textFieldCode1 = [self createRightTextFieldWithPlaceholder:@"UITextField Code 1" leftTextField:_textFieldIB1];
-    _textFieldCode2 = [self createRightTextFieldWithPlaceholder:@"UITextField Code 2" leftTextField:_textFieldIB2];
+    _textFieldCode2 = [self createRightTextFieldWithPlaceholder:@"UITextField Code 2" leftTextField:_textView];
     _textFieldCode3 = [self createRightTextFieldWithPlaceholder:@"UITextField Code 3" leftTextField:_textFieldIB3];
 
     _textFieldIB3.nextNavigationField = _textFieldCode1;
@@ -46,14 +46,14 @@
     _textFieldCode2.navigationFieldToolbar.items = @[_textFieldCode2.navigationFieldToolbar.previousButton, _textFieldCode2.navigationFieldToolbar.nextButton, customButton, flexibleSpace, _textFieldCode2.navigationFieldToolbar.doneButton];
 }
 
-- (UITextField *)createRightTextFieldWithPlaceholder:(NSString *)placeholder leftTextField:(UITextField *)letTextField {
+- (UITextField *)createRightTextFieldWithPlaceholder:(NSString *)placeholder leftTextField:(UIView *)leftField {
     UITextField *textField = [[UITextField alloc] init];
     textField.borderStyle = UITextBorderStyleRoundedRect;
-    textField.font = letTextField.font;
+    textField.font = [UIFont systemFontOfSize:14];
     textField.placeholder = placeholder;
     textField.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:textField];
-    [self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:letTextField attribute:NSLayoutAttributeWidth multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:letTextField attribute:NSLayoutAttributeCenterY multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:letTextField attribute:NSLayoutAttributeRight multiplier:1 constant:15]]];
+    [self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeWidth multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeCenterY multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeRight multiplier:1 constant:15]]];
     return textField;
 }
 

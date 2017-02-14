@@ -43,18 +43,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="nextNavigationField" destination="8jl-cg-mjy" id="bBJ-ys-bsl"/>
+                                    <outlet property="nextNavigationField" destination="cf2-gs-mCW" id="EP1-tx-KRe"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UITextField IB 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jl-cg-mjy">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="UITextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cf2-gs-mCW">
                                 <rect key="frame" x="15" y="124" width="164.5" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="YLl-qs-4d1"/>
-                                    <outlet property="nextNavigationField" destination="UDe-sO-4Mb" id="7Bg-Ss-IZR"/>
+                                    <outlet property="nextNavigationField" destination="UDe-sO-4Mb" id="8ka-tn-pDl"/>
                                 </connections>
-                            </textField>
+                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UITextField IB 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDe-sO-4Mb">
                                 <rect key="frame" x="15" y="169" width="164.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,15 +63,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UDe-sO-4Mb" firstAttribute="width" secondItem="8jl-cg-mjy" secondAttribute="width" id="4Xw-5x-Moi"/>
-                            <constraint firstItem="8jl-cg-mjy" firstAttribute="width" secondItem="Fub-gV-yWK" secondAttribute="width" id="7NU-I5-UhL"/>
-                            <constraint firstItem="8jl-cg-mjy" firstAttribute="centerX" secondItem="Fub-gV-yWK" secondAttribute="centerX" id="HWv-j5-UAF"/>
+                            <constraint firstItem="cf2-gs-mCW" firstAttribute="width" secondItem="Fub-gV-yWK" secondAttribute="width" id="4u8-Zm-p0L"/>
+                            <constraint firstItem="UDe-sO-4Mb" firstAttribute="centerX" secondItem="cf2-gs-mCW" secondAttribute="centerX" id="7Uy-CM-YXM"/>
+                            <constraint firstItem="cf2-gs-mCW" firstAttribute="top" secondItem="Fub-gV-yWK" secondAttribute="bottom" constant="15" id="ESr-7Y-kq4"/>
                             <constraint firstItem="Fub-gV-yWK" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="1:2" constant="-23" id="Ps4-iy-fsd"/>
-                            <constraint firstItem="UDe-sO-4Mb" firstAttribute="top" secondItem="8jl-cg-mjy" secondAttribute="bottom" constant="15" id="QhY-IJ-Uk6"/>
                             <constraint firstItem="Fub-gV-yWK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="15" id="W8Z-f6-Mg9"/>
-                            <constraint firstItem="UDe-sO-4Mb" firstAttribute="centerX" secondItem="8jl-cg-mjy" secondAttribute="centerX" id="t8w-J3-6eD"/>
+                            <constraint firstItem="UDe-sO-4Mb" firstAttribute="width" secondItem="cf2-gs-mCW" secondAttribute="width" id="XsX-Io-pFs"/>
+                            <constraint firstItem="cf2-gs-mCW" firstAttribute="height" secondItem="Fub-gV-yWK" secondAttribute="height" id="bxd-YP-MK2"/>
+                            <constraint firstItem="cf2-gs-mCW" firstAttribute="centerX" secondItem="Fub-gV-yWK" secondAttribute="centerX" id="vOt-fG-1XG"/>
                             <constraint firstItem="Fub-gV-yWK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="whb-cu-G3V"/>
-                            <constraint firstItem="8jl-cg-mjy" firstAttribute="top" secondItem="Fub-gV-yWK" secondAttribute="bottom" constant="15" id="zmu-1E-CpY"/>
+                            <constraint firstItem="UDe-sO-4Mb" firstAttribute="top" secondItem="cf2-gs-mCW" secondAttribute="bottom" constant="15" id="ySC-GD-tGT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Swift" id="WYM-AK-Zf8">
@@ -83,8 +84,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="textFieldIB1" destination="Fub-gV-yWK" id="f04-cH-ktN"/>
-                        <outlet property="textFieldIB2" destination="8jl-cg-mjy" id="VkK-KU-qa6"/>
                         <outlet property="textFieldIB3" destination="UDe-sO-4Mb" id="zde-ja-1bv"/>
+                        <outlet property="textView" destination="cf2-gs-mCW" id="PuD-eg-Vhg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -108,18 +109,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="nextNavigationField" destination="G0i-tW-Hlj" id="28a-ss-kKx"/>
+                                    <outlet property="nextNavigationField" destination="S3A-rg-yuY" id="cF2-z0-a8c"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UITextField IB 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0i-tW-Hlj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="UITextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S3A-rg-yuY">
                                 <rect key="frame" x="15" y="124" width="164.5" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
-                                    <outlet property="delegate" destination="1fR-K8-t7t" id="6TI-8Q-iSd"/>
-                                    <outlet property="nextNavigationField" destination="Zwe-IA-H66" id="mgw-UL-QY7"/>
+                                    <outlet property="nextNavigationField" destination="Zwe-IA-H66" id="GI2-D1-wwv"/>
                                 </connections>
-                            </textField>
+                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UITextField IB 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-IA-H66">
                                 <rect key="frame" x="15" y="169" width="164.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -128,22 +129,23 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Zwe-IA-H66" firstAttribute="width" secondItem="G0i-tW-Hlj" secondAttribute="width" id="5JM-m7-ZYm"/>
-                            <constraint firstItem="Zwe-IA-H66" firstAttribute="top" secondItem="G0i-tW-Hlj" secondAttribute="bottom" constant="15" id="Amm-ch-mW2"/>
+                            <constraint firstItem="S3A-rg-yuY" firstAttribute="height" secondItem="IJf-AO-8cw" secondAttribute="height" id="1fw-DB-qPW"/>
+                            <constraint firstItem="Zwe-IA-H66" firstAttribute="width" secondItem="S3A-rg-yuY" secondAttribute="width" id="3uE-TM-lie"/>
+                            <constraint firstItem="S3A-rg-yuY" firstAttribute="centerX" secondItem="IJf-AO-8cw" secondAttribute="centerX" id="AX3-t1-ZeD"/>
                             <constraint firstItem="IJf-AO-8cw" firstAttribute="top" secondItem="Ess-Be-Wyc" secondAttribute="bottom" constant="15" id="If7-0n-GKB"/>
-                            <constraint firstItem="G0i-tW-Hlj" firstAttribute="centerX" secondItem="IJf-AO-8cw" secondAttribute="centerX" id="Rvg-Xf-WFj"/>
-                            <constraint firstItem="Zwe-IA-H66" firstAttribute="centerX" secondItem="G0i-tW-Hlj" secondAttribute="centerX" id="UKK-qQ-e9O"/>
-                            <constraint firstItem="G0i-tW-Hlj" firstAttribute="top" secondItem="IJf-AO-8cw" secondAttribute="bottom" constant="15" id="UgU-ih-4CO"/>
+                            <constraint firstItem="Zwe-IA-H66" firstAttribute="centerX" secondItem="S3A-rg-yuY" secondAttribute="centerX" id="WFd-nb-6R5"/>
+                            <constraint firstItem="Zwe-IA-H66" firstAttribute="top" secondItem="S3A-rg-yuY" secondAttribute="bottom" constant="15" id="Wn6-Df-veh"/>
                             <constraint firstItem="IJf-AO-8cw" firstAttribute="leading" secondItem="NfO-Yb-9Fl" secondAttribute="leading" constant="15" id="XRh-OD-bDK"/>
-                            <constraint firstItem="G0i-tW-Hlj" firstAttribute="width" secondItem="IJf-AO-8cw" secondAttribute="width" id="olH-CJ-6HK"/>
+                            <constraint firstItem="S3A-rg-yuY" firstAttribute="top" secondItem="IJf-AO-8cw" secondAttribute="bottom" constant="15" id="aLk-IA-Ddv"/>
+                            <constraint firstItem="S3A-rg-yuY" firstAttribute="width" secondItem="IJf-AO-8cw" secondAttribute="width" id="c6r-Sa-fK2"/>
                             <constraint firstItem="IJf-AO-8cw" firstAttribute="width" secondItem="NfO-Yb-9Fl" secondAttribute="width" multiplier="1:2" constant="-23" id="sRR-Pj-dJu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Objective-C" id="ZCX-56-FzT"/>
                     <connections>
                         <outlet property="textFieldIB1" destination="IJf-AO-8cw" id="s9z-Np-F8f"/>
-                        <outlet property="textFieldIB2" destination="G0i-tW-Hlj" id="NJp-gu-fW7"/>
                         <outlet property="textFieldIB3" destination="Zwe-IA-H66" id="Auz-u7-pFd"/>
+                        <outlet property="textView" destination="S3A-rg-yuY" id="Ewy-YR-ZEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiY-7q-OhX" sceneMemberID="firstResponder"/>
