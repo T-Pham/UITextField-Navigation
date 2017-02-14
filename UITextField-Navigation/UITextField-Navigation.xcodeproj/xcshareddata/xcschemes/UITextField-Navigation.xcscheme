@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BuildableName = "UITextField_Navigation_Tests.xctest"
+               BlueprintName = "UITextField_Navigation_Tests"
+               ReferencedContainer = "container:../Example/UITextField-Navigation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1BFB78E31D3F690F009185E4"
+            BuildableName = "UITextField_Navigation.framework"
+            BlueprintName = "UITextField_Navigation"
+            ReferencedContainer = "container:UITextField-Navigation.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
