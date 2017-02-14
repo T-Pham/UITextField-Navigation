@@ -10,139 +10,140 @@ import Quick
 import UITextField_Navigation
 
 class UITextField_NavigationTests: QuickSpec {
-    var textField: UITextField!
+
+    var navigationField: NavigationField!
 
     override func spec() {
 
         beforeEach { 
-            self.textField = UITextField()
+            self.navigationField = UITextField()
         }
 
-        describe("nextTextField") {
+        describe("nextNavigationField") {
 
-            it("stores the next text field") {
-                let nextTextField = UITextField()
-                self.textField.nextTextField = nextTextField
-                XCTAssertEqual(self.textField.nextTextField, nextTextField)
+            it("stores the next navigation field") {
+                let nextNavigationField: NavigationField = UITextView()
+                self.navigationField.nextNavigationField = nextNavigationField
+                XCTAssertEqual(self.navigationField.nextNavigationField as! UITextView, nextNavigationField as! UITextView)
             }
 
             it("is nil at the beginning") {
-                XCTAssertNil(self.textField.nextTextField)
+                XCTAssertNil(self.navigationField.nextNavigationField)
             }
 
-            it("removes the previous text field of the old next text field") {
-                let oldNextTextField = UITextField()
-                self.textField.nextTextField = oldNextTextField
-                let newNextTextField = UITextField()
-                self.textField.nextTextField = newNextTextField;
-                XCTAssertNil(oldNextTextField.previousTextField)
+            it("removes the previous navigation field of the old next navigation field") {
+                let oldNextNavigationField: NavigationField = UITextField()
+                self.navigationField.nextNavigationField = oldNextNavigationField
+                let newNextNavigationField: NavigationField = UITextView()
+                self.navigationField.nextNavigationField = newNextNavigationField;
+                XCTAssertNil(oldNextNavigationField.previousNavigationField)
             }
 
-            it("does not retain the next text field") {
+            it("does not retain the next navigation field") {
                 autoreleasepool {
-                    self.textField.nextTextField = UITextField()
+                    self.navigationField.nextNavigationField = UITextView()
                 }
-                XCTAssertNil(self.textField.nextTextField)
+                XCTAssertNil(self.navigationField.nextNavigationField)
             }
 
             it("updates the inputAccessoryView") {
-                let nextTextField = UITextField()
-                self.textField.nextTextField = nextTextField
-                XCTAssertNotNil(self.textField.inputAccessoryView)
+                let nextNavigationField: NavigationField = UITextView()
+                self.navigationField.nextNavigationField = nextNavigationField
+                XCTAssertNotNil(self.navigationField.inputAccessoryView)
             }
         }
 
-        describe("previousTextField") {
+        describe("previousNavigationField") {
 
-            it("stores the previous text field") {
-                let previousTextField = UITextField()
-                previousTextField.nextTextField = self.textField
-                XCTAssertEqual(self.textField.previousTextField, previousTextField)
+            it("stores the previous navigation field") {
+                let previousNavigationField: NavigationField = UITextView()
+                previousNavigationField.nextNavigationField = self.navigationField
+                XCTAssertEqual(self.navigationField.previousNavigationField as! UITextView, previousNavigationField as! UITextView)
             }
 
             it("is nil at the beginning") {
-                XCTAssertNil(self.textField.previousTextField)
+                XCTAssertNil(self.navigationField.previousNavigationField)
             }
 
-            it("does not retain the next text field") {
+            it("does not retain the next navigation field") {
                 autoreleasepool {
-                    var previousTextField: UITextField? = UITextField()
-                    previousTextField!.nextTextField = self.textField
-                    previousTextField = nil;
+                    var previousNavigationField: NavigationField? = UITextView()
+                    previousNavigationField!.nextNavigationField = self.navigationField
+                    previousNavigationField = nil;
                 }
-                XCTAssertNil(self.textField.previousTextField)
+                XCTAssertNil(self.navigationField.previousNavigationField)
             }
 
             it("updates the inputAccessoryView") {
-                let previousTextField = UITextField()
-                previousTextField.nextTextField = self.textField
-                XCTAssertNotNil(self.textField.inputAccessoryView)
+                let previousNavigationField: NavigationField = UITextView()
+                previousNavigationField.nextNavigationField = self.navigationField
+                XCTAssertNotNil(self.navigationField.inputAccessoryView)
             }
         }
 
-        describe("textFieldNavigationToolbar") {
+        describe("NavigationFieldToolbar") {
 
             it("returns the toolbar") {
-                let nextTextField = UITextField()
-                self.textField.nextTextField = nextTextField
-                XCTAssert(self.textField.textFieldNavigationToolbar!.isKind(of: UITextFieldNavigationToolbar.self))
+                let nextNavigationField: NavigationField = UITextView()
+                self.navigationField.nextNavigationField = nextNavigationField
+                XCTAssert(self.navigationField.navigationFieldToolbar!.isKind(of: NavigationFieldToolbar.self))
             }
 
             it("is nil at the beginning") {
-                XCTAssertNil(self.textField.textFieldNavigationToolbar)
+                XCTAssertNil(self.navigationField.navigationFieldToolbar)
             }
 
             it("does not return custom inputAccessoryView") {
-                self.textField.inputAccessoryView = UIView()
-                XCTAssertNil(self.textField.textFieldNavigationToolbar)
+                self.navigationField.inputAccessoryView = UIView()
+                XCTAssertNil(self.navigationField.navigationFieldToolbar)
             }
         }
 
         describe("applyInputAccessoryView") {
 
             it("creates the inputAccessoryView") {
-                self.textField.applyInputAccessoryView()
-                XCTAssertNotNil(self.textField.textFieldNavigationToolbar)
+                self.navigationField.applyInputAccessoryView()
+                XCTAssertNotNil(self.navigationField.navigationFieldToolbar)
             }
 
             it("does not re-create the inputAccessoryView") {
-                self.textField.applyInputAccessoryView()
-                let inputAccessoryView = self.textField.inputAccessoryView
-                self.textField.applyInputAccessoryView()
-                XCTAssertEqual(inputAccessoryView, self.textField.inputAccessoryView)
+                self.navigationField.applyInputAccessoryView()
+                let inputAccessoryView = self.navigationField.inputAccessoryView
+                self.navigationField.applyInputAccessoryView()
+                XCTAssertEqual(inputAccessoryView, self.navigationField.inputAccessoryView)
             }
         }
 
         describe("delegate") {
 
             context("implements all methods") {
-                var previousTextField: UITextField!
-                var nextTextField: UITextField!
-                var delegate: UITextFieldNavigationDelegateFullImplementation!
+                var previousNavigationField: NavigationField!
+                var nextNavigationField: NavigationField!
+                var delegate: NavigationFieldDelegateFullImplementation!
 
                 beforeEach {
-                    previousTextField = UITextField()
-                    nextTextField = UITextField()
-                    previousTextField.nextTextField = self.textField
-                    self.textField.nextTextField = nextTextField;
-                    delegate = UITextFieldNavigationDelegateFullImplementation()
-                    self.textField.delegate = delegate
+                    previousNavigationField = UITextField()
+                    nextNavigationField = UITextView()
+                    previousNavigationField.nextNavigationField = self.navigationField
+                    self.navigationField.nextNavigationField = nextNavigationField;
+                    delegate = NavigationFieldDelegateFullImplementation()
+                    (self.navigationField as? UITextField)?.delegate = delegate
                 }
 
                 it("calls the delegate method for the previous button") {
-                    let previousButton = self.textField.textFieldNavigationToolbar!.previousButton
+                    let previousButton = self.navigationField.navigationFieldToolbar!.previousButton
                     _ = previousButton.target!.perform(previousButton.action)
                     XCTAssert(delegate.previousButtonTapped)
                 }
 
                 it("calls the delegate method for the next button") {
-                    let nextButton = self.textField.textFieldNavigationToolbar!.nextButton
+                    let nextButton = self.navigationField.navigationFieldToolbar!.nextButton
                     _ = nextButton.target!.perform(nextButton.action)
                     XCTAssert(delegate.nextButtonTapped)
                 }
 
                 it("calls the delegate method for the done button") {
-                    let doneButton = self.textField.textFieldNavigationToolbar!.doneButton
+                    let doneButton = self.navigationField.navigationFieldToolbar!.doneButton
                     _ = doneButton.target!.perform(doneButton.action)
                     XCTAssert(delegate.doneButtonTapped)
                 }
@@ -152,32 +153,32 @@ class UITextField_NavigationTests: QuickSpec {
                 var textField: MyTextField!
                 var previousTextField: MyTextField!
                 var nextTextField: MyTextField!
-                var delegate: UITextFieldNavigationDelegateEmptyImplementation!
+                var delegate: NavigationFieldDelegateEmptyImplementation!
 
                 beforeEach {
                     textField = MyTextField()
                     previousTextField = MyTextField()
                     nextTextField = MyTextField()
-                    previousTextField.nextTextField = textField
-                    textField.nextTextField = nextTextField;
-                    delegate = UITextFieldNavigationDelegateEmptyImplementation()
+                    previousTextField.nextNavigationField = textField
+                    textField.nextNavigationField = nextTextField;
+                    delegate = NavigationFieldDelegateEmptyImplementation()
                     textField.delegate = delegate
                 }
 
                 it("performs the default behavior when tapping the previous button") {
-                    let previousButton = textField.textFieldNavigationToolbar!.previousButton
+                    let previousButton = textField.navigationFieldToolbar!.previousButton
                     _ = previousButton.target!.perform(previousButton.action)
                     XCTAssert(previousTextField.becomeFirstResponderPerformed)
                 }
 
                 it("performs the default behavior when tapping the next button") {
-                    let nextButton = textField.textFieldNavigationToolbar!.nextButton
+                    let nextButton = textField.navigationFieldToolbar!.nextButton
                     _ = nextButton.target!.perform(nextButton.action)
                     XCTAssert(nextTextField.becomeFirstResponderPerformed)
                 }
 
                 it("performs the default behavior when tapping the done button") {
-                    let doneButton = textField.textFieldNavigationToolbar!.doneButton
+                    let doneButton = textField.navigationFieldToolbar!.doneButton
                     _ = doneButton.target!.perform(doneButton.action)
                     XCTAssert(textField.resignFirstResponderPerformed)
                 }
