@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Protocol for delegate of `NavigationField`.
 @objc public protocol NavigationFieldDelegate {
 
     /**
@@ -32,14 +33,28 @@ import UIKit
     @objc optional func navigationFieldDidTapDoneButton(_ navigationField: NavigationField)
 }
 
+
+/// Protocol for navigation field.
 @objc public protocol NavigationField {
 
+    /// The next navigation field.
     weak var nextNavigationField: NavigationField? { get set }
+
+    /// The previous navigation field.
     weak var previousNavigationField: NavigationField? { get }
+
+    /// The toolbar on the keyboard for the receiver.
     var navigationFieldToolbar: NavigationFieldToolbar? { get }
+
+    /// The input accessory view.
     var inputAccessoryView: UIView? { get set }
 
+    /// Make the receiver become first responder.
     @discardableResult func becomeFirstResponder() -> Bool
+
+    /// Make the receiver resign first responder.
     @discardableResult func resignFirstResponder() -> Bool
+
+    /// Force applying the `navigationFieldToolbar` to the keyboard for the receiver.
     func applyInputAccessoryView()
 }

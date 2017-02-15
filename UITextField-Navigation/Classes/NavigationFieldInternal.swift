@@ -78,7 +78,7 @@ extension NavigationFieldInternal {
         }
     }
 
-    public func internal_applyInputAccessoryView() {
+    func internal_applyInputAccessoryView() {
         if navigationFieldToolbar == nil {
             let navigationToolbar = NavigationFieldToolbar()
             navigationToolbar.navigationDelegate = self

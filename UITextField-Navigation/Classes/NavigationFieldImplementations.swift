@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// UITextView extension for NavigationField protocol.
 extension UITextView: NavigationField {
 
     /// The next navigation field. Setting this will also set the `previousNavigationField` on the assigned navigation field.
@@ -37,6 +38,7 @@ extension UITextView: NavigationField {
     }
 }
 
+/// UITextField extension for NavigationField protocol.
 extension UITextField: NavigationField {
 
     /// The next navigation field. Setting this will also set the `previousNavigationField` on the assigned navigation field.
