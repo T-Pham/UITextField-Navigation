@@ -39,3 +39,6 @@ Update swift package
 
 # v2.0.0
 Upgrade to Swift 3
+
+# v3.0.0
+Support UITextView

@@ -37,7 +37,7 @@
 
 ## Description
 
-UITextField-Navigation adds next, previous and done buttons to the keyboard for your `UITextField`s. It allows you to specify a next text field either on the Interface Builder or programmatically. Then, you can access next and previous text fields of each `UITextField` easily.
+UITextField-Navigation adds next, previous and done buttons to the keyboard for your `UITextField`s and `UITextView`s. It allows you to specify a next field either on the Interface Builder or programmatically. Then, you can access next and previous fields of each `UITextField` or `UITextView` easily.
 
 The UI is [**highly customizable**](#ui-customization).
 
@@ -53,7 +53,7 @@ To run the example project:
 
 ### Basic
 
-You can set the `nextTextField` property for each `UITextField` either on the Interface Builder or programmatically. The `previousTextField` property will be set on the other `UITextField` automatically for you.
+You can set the `nextNavigationField` property for each `UITextField` and `UITextView` either on the Interface Builder or programmatically. The `previousNavigationField` property will be set on the other `UITextField` or `UITextView` automatically for you.
 
 Example:
 
@@ -61,20 +61,20 @@ Example:
 import UITextField_Navigation
 
 ...
-let textField1 = UITextField()
-let textField2 = UITextField()
-textField1.nextTextField = textField2
+let textField = UITextField()
+let textView = UITextView()
+textField.nextNavigationField = textView
 
-assert(textField2 == textField1.nextTextField)
-assert(textField1 == textField2.previousTextField)
+assert(textView == textField.nextNavigationField)
+assert(textField == textView.previousNavigationField)
 ```
 
-Please note that the `nextTextField` and `previousTextField` properties are not retained.
+Please note that the `nextNavigationField` and `previousNavigationField` properties are not retained.
 
 ### Capturing taps
 
-To capture taps on the next, previous and done buttons, assign a `delegate` for your `UITextField` also either on the Interface Builder or programmatically. Then implement the `UITextFieldNavigationDelegate` protocol for the `delegate`.
-Please note that you have to explicitly declare that the `delegate` conforms to the protocol to make it work.
+To capture taps on the next, previous and done buttons, assign a `delegate` to your `NavigationField`, which is a `UITextField` or `UITextView`, also either on the Interface Builder or programmatically. Then implement the `NavigationFieldDelegate` protocol (in addition to the `UITextFieldDelegate` or `UITextViewDelegate` protocol) for the `delegate`.
+Please note that you have to explicitly declare that the `delegate` conforms to the `NavigationFieldDelegate` protocol to make it work.
 
 <details open>
 <summary>Swift:</summary>
@@ -83,20 +83,20 @@ import UIKit
 import UITextField_Navigation
 
 ...
-extension ViewController: UITextFieldNavigationDelegate { // explicitly protocol conforming declaration
+extension ViewController: NavigationFieldDelegate { // explicitly protocol conforming declaration
 
-    func textFieldNavigationDidTapPreviousButton(_ textField: UITextField) {
-        textField.previousTextField?.becomeFirstResponder()
+    func navigationFieldDidTapPreviousButton(_ navigationField: NavigationField) {
+        navigationField.previousNavigationField?.becomeFirstResponder()
         // your custom work
     }
 
-    func textFieldNavigationDidTapNextButton(_ textField: UITextField) {
-        textField.nextTextField?.becomeFirstResponder()
+    func navigationFieldDidTapNextButton(_ navigationField: NavigationField) {
+        navigationField.nextNavigationField?.becomeFirstResponder()
         // your custom work
     }
 
-    func textFieldNavigationDidTapDoneButton(_ textField: UITextField) {
-        textField.resignFirstResponder()
+    func navigationFieldDidTapDoneButton(_ navigationField: NavigationField) {
+        navigationField.resignFirstResponder()
         // your custom work
     }
 }
@@ -109,23 +109,23 @@ extension ViewController: UITextFieldNavigationDelegate { // explicitly protocol
 @import UITextField_Navigation;
 #import "ViewController.h"
 
-@interface ViewController () <UITextFieldNavigationDelegate> // explicitly protocol conforming declaration
+@interface ViewController () <NavigationFieldDelegate> // explicitly protocol conforming declaration
 
 ...
-#pragma mark - UITextFieldNavigationDelegate
+#pragma mark - NavigationFieldDelegate
 
-- (void)textFieldNavigationDidTapPreviousButton:(UITextField *)textField {
-    [textField.previousTextField becomeFirstResponder];
+- (void)navigationFieldDidTapPreviousButton:(id<NavigationField>)navigationField {
+    [navigationField.previousNavigationField becomeFirstResponder];
     // your custom work
 }
 
-- (void)textFieldNavigationDidTapNextButton:(UITextField *)textField {
-    [textField.nextTextField becomeFirstResponder];
+- (void)navigationFieldDidTapNextButton:(id<NavigationField>)navigationField {
+    [navigationField.nextNavigationField becomeFirstResponder];
     // your custom work
 }
 
-- (void)textFieldNavigationDidTapDoneButton:(UITextField *)textField {
-    [textField resignFirstResponder];
+- (void)navigationFieldDidTapDoneButton:(id<NavigationField>)navigationField {
+    [navigationField resignFirstResponder];
     // your custom work
 }
 ```
@@ -135,32 +135,32 @@ extension ViewController: UITextFieldNavigationDelegate { // explicitly protocol
 
 #### Using UIAppearance
 
-Modify the appearance proxy of the `UITextFieldNavigationToolbar` and `UITextFieldNavigationToolbarButtonItem` classes to customize the navigation view's UI for all text fields.
+Modify the appearance proxy of the `NavigationFieldToolbar` and `NavigationFieldToolbarButtonItem` classes to customize the navigation view's UI for all fields.
 
 ```swift
-UITextFieldNavigationToolbar.appearance().barStyle = .black
-UITextFieldNavigationToolbar.appearance().backgroundColor = UIColor.purple
-UITextFieldNavigationToolbarButtonItem.appearance().tintColor = UIColor.white
+NavigationFieldToolbar.appearance().barStyle = .black
+NavigationFieldToolbar.appearance().backgroundColor = UIColor.purple
+NavigationFieldToolbarButtonItem.appearance().tintColor = UIColor.white
 ```
 
 ![Screenshot 3](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot3.png?raw=true)
 
 #### Directly and adding more buttons
 
-Alternatively, you can modify the UI directly on each navigation view by accessing the `textFieldNavigationToolbar` property of a text field.
+Alternatively, you can directly modify the UI of each navigation view by accessing the `navigationFieldToolbar` property of a `UITextField` or `UITextView`.
 
 ```swift
 ...
-textField.textFieldNavigationToolbar?.barStyle = .default
-textField.textFieldNavigationToolbar?.backgroundColor = UIColor.red
-textField.textFieldNavigationToolbar?.previousButton.title = "Previous"
-textField.textFieldNavigationToolbar?.nextButton.title = "Next"
-textField.textFieldNavigationToolbar?.doneButton.title = "Dismiss"
+navigationField.navigationFieldToolbar?.barStyle = .default
+navigationField.navigationFieldToolbar?.backgroundColor = UIColor.red
+navigationField.navigationFieldToolbar?.previousButton.title = "Previous"
+navigationField.navigationFieldToolbar?.nextButton.title = "Next"
+navigationField.navigationFieldToolbar?.doneButton.title = "Dismiss"
 
 // Add a custom button
 let customButton = UIBarButtonItem(title: "Custom", style: .plain, target: nil, action: nil)
 let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-textField.textFieldNavigationToolbar?.items = [textField.textFieldNavigationToolbar!.previousButton, textField.textFieldNavigationToolbar!.nextButton, customButton, flexibleSpace, textField.textFieldNavigationToolbar!.doneButton]
+navigationField.navigationFieldToolbar?.items = [navigationField.navigationFieldToolbar!.previousButton, navigationField.navigationFieldToolbar!.nextButton, customButton, flexibleSpace, navigationField.navigationFieldToolbar!.doneButton]
 ```
 
 ![Screenshot 4](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot4.png?raw=true)
