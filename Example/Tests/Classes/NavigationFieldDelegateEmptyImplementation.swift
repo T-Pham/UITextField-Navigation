@@ -9,4 +9,4 @@
 import UIKit
 import UITextField_Navigation
 
-class NavigationFieldDelegateEmptyImplementation: NSObject, UITextFieldDelegate, NavigationFieldDelegate {}
+class NavigationFieldDelegateEmptyImplementation: NSObject, UITextViewDelegate, NavigationFieldDelegate {}

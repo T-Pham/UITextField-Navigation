@@ -1,5 +1,5 @@
 //
-//  MyTextField.swift
+//  MyTextView.swift
 //  UITextField-Navigation
 //
 //  Created by Thanh Pham on 6/30/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyTextField: UITextField {
+class MyTextView: UITextView {
     var resignFirstResponderPerformed = false
     var becomeFirstResponderPerformed = false
 

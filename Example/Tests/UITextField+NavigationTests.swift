@@ -150,37 +150,37 @@ class UITextField_NavigationTests: QuickSpec {
             }
 
             context("implements no methods") {
-                var textField: MyTextField!
-                var previousTextField: MyTextField!
-                var nextTextField: MyTextField!
+                var navigationField: MyTextView!
+                var previousNavigationField: MyTextView!
+                var nextNavigationField: MyTextView!
                 var delegate: NavigationFieldDelegateEmptyImplementation!
 
                 beforeEach {
-                    textField = MyTextField()
-                    previousTextField = MyTextField()
-                    nextTextField = MyTextField()
-                    previousTextField.nextNavigationField = textField
-                    textField.nextNavigationField = nextTextField;
+                    navigationField = MyTextView()
+                    previousNavigationField = MyTextView()
+                    nextNavigationField = MyTextView()
+                    previousNavigationField.nextNavigationField = navigationField
+                    navigationField.nextNavigationField = nextNavigationField;
                     delegate = NavigationFieldDelegateEmptyImplementation()
-                    textField.delegate = delegate
+                    navigationField.delegate = delegate
                 }
 
                 it("performs the default behavior when tapping the previous button") {
-                    let previousButton = textField.navigationFieldToolbar!.previousButton
+                    let previousButton = navigationField.navigationFieldToolbar!.previousButton
                     _ = previousButton.target!.perform(previousButton.action)
-                    XCTAssert(previousTextField.becomeFirstResponderPerformed)
+                    XCTAssert(previousNavigationField.becomeFirstResponderPerformed)
                 }
 
                 it("performs the default behavior when tapping the next button") {
-                    let nextButton = textField.navigationFieldToolbar!.nextButton
+                    let nextButton = navigationField.navigationFieldToolbar!.nextButton
                     _ = nextButton.target!.perform(nextButton.action)
-                    XCTAssert(nextTextField.becomeFirstResponderPerformed)
+                    XCTAssert(nextNavigationField.becomeFirstResponderPerformed)
                 }
 
                 it("performs the default behavior when tapping the done button") {
-                    let doneButton = textField.navigationFieldToolbar!.doneButton
+                    let doneButton = navigationField.navigationFieldToolbar!.doneButton
                     _ = doneButton.target!.perform(doneButton.action)
-                    XCTAssert(textField.resignFirstResponderPerformed)
+                    XCTAssert(navigationField.resignFirstResponderPerformed)
                 }
             }
         }
