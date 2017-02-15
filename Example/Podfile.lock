@@ -1,6 +1,6 @@
 PODS:
   - Quick (0.9.3)
-  - UITextField-Navigation (2.0.0)
+  - UITextField-Navigation (3.0.0)
 
 DEPENDENCIES:
   - Quick (from `https://github.com/Quick/Quick.git`, branch `swift-3.0`)
@@ -20,7 +20,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
-  UITextField-Navigation: 8c1b614136dc07f5f3cc43de63d79fb515c81206
+  UITextField-Navigation: 681dcdf4041ca35ab20e21e3028e6b24b178a1f2
 
 PODFILE CHECKSUM: 6ae7cb214873fdf76cb06499d14e945509731cc7
 
