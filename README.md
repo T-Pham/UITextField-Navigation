@@ -35,6 +35,8 @@
 [![CocoaPods](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
 [![CocoaPods downloads](https://img.shields.io/cocoapods/dt/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
 
+[![Say thanks!](https://img.shields.io/badge/Say%20Thanks!-🦉-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/T-Pham)
+
 ## Description
 
 UITextField-Navigation adds next, previous and done buttons to the keyboard for your `UITextField`s and `UITextView`s. It allows you to specify a next field either on the Interface Builder or programmatically. Then, you can access next and previous fields of each `UITextField` or `UITextView` easily.
