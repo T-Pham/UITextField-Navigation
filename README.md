@@ -80,6 +80,7 @@ Please note that you have to explicitly declare that the `delegate` conforms to 
 
 <details open>
 <summary>Swift:</summary>
+
 ```swift
 import UIKit
 import UITextField_Navigation
@@ -103,10 +104,12 @@ extension ViewController: NavigationFieldDelegate { // explicitly protocol confo
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Objective-C:</summary>
+
 ```objective-c
 @import UITextField_Navigation;
 #import "ViewController.h"
@@ -131,6 +134,7 @@ extension ViewController: NavigationFieldDelegate { // explicitly protocol confo
     // your custom work
 }
 ```
+
 </details>
 
 ### UI Customization
