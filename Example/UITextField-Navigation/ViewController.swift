@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing: \(textField.placeholder)")
+        print("textFieldDidBeginEditing: \(textField.placeholder ?? "nil")")
     }
 }
 

@@ -21,13 +21,13 @@ public class NavigationFieldToolbar: UIToolbar {
     weak var navigationDelegate: NavigationFieldToolbarDelegate?
 
     /// Holds the previous button.
-    public let previousButton: NavigationFieldToolbarButtonItem
+    @objc public let previousButton: NavigationFieldToolbarButtonItem
 
     /// Holds the next button.
-    public let nextButton: NavigationFieldToolbarButtonItem
+    @objc public let nextButton: NavigationFieldToolbarButtonItem
 
     /// Holds the done button.
-    public let doneButton: NavigationFieldToolbarButtonItem
+    @objc public let doneButton: NavigationFieldToolbarButtonItem
 
     /// Has not been implemented. Use `init()` instead.
     required public init?(coder aDecoder: NSCoder) {
@@ -55,19 +55,19 @@ public class NavigationFieldToolbar: UIToolbar {
         sizeToFit()
     }
 
-    func previousButtonDidTap() {
+    @objc func previousButtonDidTap() {
         if let navigationDelegate = navigationDelegate {
             navigationDelegate.navigationFieldToolbarDidTapPreviousButton(self)
         }
     }
 
-    func nextButtonDidTap() {
+    @objc func nextButtonDidTap() {
         if let navigationDelegate = navigationDelegate {
             navigationDelegate.navigationFieldToolbarDidTapNextButton(self)
         }
     }
 
-    func doneButtonDidTap() {
+    @objc func doneButtonDidTap() {
         if let navigationDelegate = navigationDelegate {
             navigationDelegate.navigationFieldToolbarDidTapDoneButton(self)
         }

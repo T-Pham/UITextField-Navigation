@@ -1,3 +1,4 @@
+platform :ios, '8.0'
 use_frameworks!
 
 target 'UITextField-Navigation_Example' do
@@ -7,5 +8,5 @@ end
 target 'UITextField_Navigation_Tests' do
     pod 'UITextField-Navigation', :path => '../'
 
-    pod 'Quick', :git => 'https://github.com/Quick/Quick.git', :branch => 'swift-3.0'
+    pod 'Quick', '~> 1.2'
 end
