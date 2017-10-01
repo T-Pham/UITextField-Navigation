@@ -42,3 +42,6 @@ Upgrade to Swift 3
 
 # v3.0.0
 Support UITextView
+
+# v4.0.0
+Convert to Swift 4
