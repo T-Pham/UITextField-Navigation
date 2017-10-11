@@ -30,13 +30,13 @@ class ViewController: UIViewController {
 
         textFieldCode2.delegate = self
         textFieldCode2.navigationFieldToolbar?.barStyle = .default
-        textFieldCode2.navigationFieldToolbar?.backgroundColor = UIColor.red
+        textFieldCode2.navigationFieldToolbar?.backgroundColor = .red
         textFieldCode2.navigationFieldToolbar?.previousButton.title = "Previous"
         textFieldCode2.navigationFieldToolbar?.nextButton.title = "Next"
         textFieldCode2.navigationFieldToolbar?.doneButton.title = "Dismiss"
 
         let customButton = UIBarButtonItem(title: "Custom", style: .plain, target: nil, action: nil)
-        customButton.tintColor = UIColor.white
+        customButton.tintColor = .white
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         textFieldCode2.navigationFieldToolbar?.items = [textFieldCode2.navigationFieldToolbar!.previousButton, textFieldCode2.navigationFieldToolbar!.nextButton, customButton, flexibleSpace, textFieldCode2.navigationFieldToolbar!.doneButton]
     }

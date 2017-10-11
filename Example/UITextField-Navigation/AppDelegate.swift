@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         NavigationFieldToolbar.appearance().barStyle = .black
-        NavigationFieldToolbar.appearance().backgroundColor = UIColor.purple
-        NavigationFieldToolbarButtonItem.appearance().tintColor = UIColor.white
+        NavigationFieldToolbar.appearance().backgroundColor = .purple
+        NavigationFieldToolbarButtonItem.appearance().tintColor = .white
         return true
     }
 }
