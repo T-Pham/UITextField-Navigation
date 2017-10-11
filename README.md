@@ -146,7 +146,11 @@ Modify the appearance proxy of the `NavigationFieldToolbar` and `NavigationField
 ```swift
 NavigationFieldToolbar.appearance().barStyle = .black
 NavigationFieldToolbar.appearance().backgroundColor = .purple
-NavigationFieldToolbarButtonItem.appearance().tintColor = .white
+if #available(iOS 11.0, *) {
+    UIButton.appearance(whenContainedInInstancesOf: [NavigationFieldToolbar.self]).tintColor = .white
+} else {
+    NavigationFieldToolbarButtonItem.appearance().tintColor = .white
+}
 ```
 
 ![Screenshot 3](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot3.png?raw=true)
