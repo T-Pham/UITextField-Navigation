@@ -145,8 +145,12 @@ Modify the appearance proxy of the `NavigationFieldToolbar` and `NavigationField
 
 ```swift
 NavigationFieldToolbar.appearance().barStyle = .black
-NavigationFieldToolbar.appearance().backgroundColor = UIColor.purple
-NavigationFieldToolbarButtonItem.appearance().tintColor = UIColor.white
+NavigationFieldToolbar.appearance().backgroundColor = .purple
+if #available(iOS 11.0, *) {
+    UIButton.appearance(whenContainedInInstancesOf: [NavigationFieldToolbar.self]).tintColor = .white
+} else {
+    NavigationFieldToolbarButtonItem.appearance().tintColor = .white
+}
 ```
 
 ![Screenshot 3](https://github.com/T-Pham/UITextField-Navigation/blob/master/Screenshots/screenshot3.png?raw=true)
@@ -158,7 +162,7 @@ Alternatively, you can directly modify the UI of each navigation view by accessi
 ```swift
 ...
 navigationField.navigationFieldToolbar?.barStyle = .default
-navigationField.navigationFieldToolbar?.backgroundColor = UIColor.red
+navigationField.navigationFieldToolbar?.backgroundColor = .red
 navigationField.navigationFieldToolbar?.previousButton.title = "Previous"
 navigationField.navigationFieldToolbar?.nextButton.title = "Next"
 navigationField.navigationFieldToolbar?.doneButton.title = "Dismiss"

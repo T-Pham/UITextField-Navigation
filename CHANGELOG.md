@@ -45,3 +45,6 @@ Support UITextView
 
 # v4.0.0
 Convert to Swift 4
+
+# v4.0.1
+Update for iOS 11 UIBarButtonItem changes
