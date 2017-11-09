@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6717071FB41B8D001B7B72 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6717061FB41B8D001B7B72 /* Config.swift */; };
 		1B9928A71E4D606F00C374CF /* NavigationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9928A61E4D606F00C374CF /* NavigationField.swift */; };
 		1B9928A91E4D71DF00C374CF /* NavigationFieldImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9928A81E4D71DF00C374CF /* NavigationFieldImplementations.swift */; };
 		1B9928AB1E4D736100C374CF /* NavigationFieldInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9928AA1E4D736100C374CF /* NavigationFieldInternal.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B6717061FB41B8D001B7B72 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1B9928A61E4D606F00C374CF /* NavigationField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationField.swift; sourceTree = "<group>"; };
 		1B9928A81E4D71DF00C374CF /* NavigationFieldImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFieldImplementations.swift; sourceTree = "<group>"; };
 		1B9928AA1E4D736100C374CF /* NavigationFieldInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFieldInternal.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				1B9928AC1E4D749200C374CF /* NavigationFieldToolbar.swift */,
 				1B9928AE1E4D75DC00C374CF /* NavigationFieldToolbarButtonItem.swift */,
 				1BFB78F41D3F6947009185E4 /* WeakObjectContainer.swift */,
+				1B6717061FB41B8D001B7B72 /* Config.swift */,
 			);
 			path = Classes;
 			sourceTree = SOURCE_ROOT;
@@ -160,6 +163,7 @@
 				1B9928AB1E4D736100C374CF /* NavigationFieldInternal.swift in Sources */,
 				1BFB78F91D3F6947009185E4 /* WeakObjectContainer.swift in Sources */,
 				1B9928A71E4D606F00C374CF /* NavigationField.swift in Sources */,
+				1B6717071FB41B8D001B7B72 /* Config.swift in Sources */,
 				1B9928AF1E4D75DC00C374CF /* NavigationFieldToolbarButtonItem.swift in Sources */,
 				1B9928A91E4D71DF00C374CF /* NavigationFieldImplementations.swift in Sources */,
 				1B9928AD1E4D749200C374CF /* NavigationFieldToolbar.swift in Sources */,

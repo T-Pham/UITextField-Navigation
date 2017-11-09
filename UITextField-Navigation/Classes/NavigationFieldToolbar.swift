@@ -35,9 +35,9 @@ public class NavigationFieldToolbar: UIToolbar {
     }
 
     init() {
-        previousButton = NavigationFieldToolbarButtonItem(title: " ❮ ", style: .plain, target: nil, action: nil)
-        nextButton = NavigationFieldToolbarButtonItem(title: " ❯ ", style: .plain, target: nil, action: nil)
-        doneButton = NavigationFieldToolbarButtonItem(title: " ▼ ", style: .plain, target: nil, action: nil)
+        previousButton = NavigationFieldToolbarButtonItem(title: Config.previousButtonTitle, style: .plain, target: nil, action: nil)
+        nextButton = NavigationFieldToolbarButtonItem(title: Config.nextButtonTitle, style: .plain, target: nil, action: nil)
+        doneButton = NavigationFieldToolbarButtonItem(title: Config.doneButtonTitle, style: .plain, target: nil, action: nil)
 
         super.init(frame: CGRect.zero)
 
