@@ -137,6 +137,27 @@ extension ViewController: NavigationFieldDelegate { // explicitly protocol confo
 
 </details>
 
+### Set button titles
+
+The titles of the previous, next and done buttons can be modified for each instant by setting the `title` property of each corresponding button.
+
+```swift
+navigationField.navigationFieldToolbar?.previousButton.title = "Previous"
+navigationField.navigationFieldToolbar?.nextButton.title = "Next"
+navigationField.navigationFieldToolbar?.doneButton.title = "Dismiss"
+```
+
+Or they can be set globally for all instances using `Config`.
+
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    UITextField_Navigation.Config.previousButtonTitle = "Previous"
+    UITextField_Navigation.Config.nextButtonTitle = "Next"
+    UITextField_Navigation.Config.doneButtonTitle = "Done"
+    return true
+}
+```
+
 ### UI Customization
 
 #### Using UIAppearance
@@ -163,9 +184,6 @@ Alternatively, you can directly modify the UI of each navigation view by accessi
 ...
 navigationField.navigationFieldToolbar?.barStyle = .default
 navigationField.navigationFieldToolbar?.backgroundColor = .red
-navigationField.navigationFieldToolbar?.previousButton.title = "Previous"
-navigationField.navigationFieldToolbar?.nextButton.title = "Next"
-navigationField.navigationFieldToolbar?.doneButton.title = "Dismiss"
 
 // Add a custom button
 let customButton = UIBarButtonItem(title: "Custom", style: .plain, target: nil, action: nil)
