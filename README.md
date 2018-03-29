@@ -217,19 +217,10 @@ pod 'UITextField-Navigation'
 2. Congratulations!
 
 ## Compatibility
-From version 2.0.0, Swift 3 syntax is used. If your project is still using Swift version 2, please use a UITextField-Navigation version prior to 2.0.0.
 
-Podfile
-
-```ruby
-pod 'UITextField-Navigation', '~> 1.4.3'
-```
-
-or Cartfile
-
-```ruby
-github "T-Pham/UITextField-Navigation" ~> 1.4.3
-```
+- Swift 4: please use the latest version
+- Swift 3: please use version 3.0.0
+- Swift 2: please use version 1.4.3
 
 ## Apps that use UITextField-Navigation
 
