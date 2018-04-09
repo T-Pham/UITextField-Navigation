@@ -6,14 +6,18 @@ DEPENDENCIES:
   - Quick (~> 1.2)
   - UITextField-Navigation (from `../`)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Quick
+
 EXTERNAL SOURCES:
   UITextField-Navigation:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  UITextField-Navigation: d7b1be0e2cf110d2c47eb233878d1e5c2fc880dd
+  UITextField-Navigation: 107cf14deb8b1d68626e58776ec9c2ce21ed5215
 
-PODFILE CHECKSUM: 04ee1675958a2d23713a2d3f8c22f313889bff17
+PODFILE CHECKSUM: ae5c57e4b73fe1551f01a2dcfdfd5188664fae63
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
