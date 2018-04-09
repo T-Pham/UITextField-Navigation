@@ -15,8 +15,8 @@ var PreviousNavigationFieldKey: Int8 = 0
 protocol NavigationFieldInternal: NavigationField, NavigationFieldToolbarDelegate {
 
     var internal_delegate: AnyObject? { get }
-    weak var internal_nextNavigationField: NavigationField? { get set }
-    weak var internal_previousNavigationField: NavigationField? { get set }
+    var internal_nextNavigationField: NavigationField? { get set }
+    var internal_previousNavigationField: NavigationField? { get set }
 
     func internal_applyInputAccessoryView()
 

@@ -1,6 +1,6 @@
 PODS:
   - Quick (1.2.0)
-  - UITextField-Navigation (4.0.1)
+  - UITextField-Navigation (4.0.3)
 
 DEPENDENCIES:
   - Quick (~> 1.2)
@@ -12,7 +12,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  UITextField-Navigation: 313eca791eb836124e759d53a8673fd21940ff0f
+  UITextField-Navigation: d7b1be0e2cf110d2c47eb233878d1e5c2fc880dd
 
 PODFILE CHECKSUM: 04ee1675958a2d23713a2d3f8c22f313889bff17
 

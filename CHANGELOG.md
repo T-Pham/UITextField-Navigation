@@ -51,3 +51,6 @@ Update for iOS 11 UIBarButtonItem changes
 
 # v4.0.2
 Add global `Config` for setting button titles
+
+# v4.0.3
+Upgrade for Swift 4.1
