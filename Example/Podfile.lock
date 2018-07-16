@@ -7,7 +7,7 @@ DEPENDENCIES:
   - UITextField-Navigation (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Quick
 
 EXTERNAL SOURCES:
@@ -20,4 +20,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ae5c57e4b73fe1551f01a2dcfdfd5188664fae63
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
