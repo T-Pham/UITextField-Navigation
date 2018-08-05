@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         textField.placeholder = placeholder
         textField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textField)
-        view.addConstraints([NSLayoutConstraint(item: textField, attribute: .width, relatedBy: .equal, toItem: leftField, attribute: .width, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .centerY, relatedBy: .equal, toItem: leftField, attribute: .centerY, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .left, relatedBy: .equal, toItem: leftField, attribute: .right, multiplier: 1, constant: 15)])
+        view.addConstraints([NSLayoutConstraint(item: textField, attribute: .width, relatedBy: .equal, toItem: leftField, attribute: .width, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .centerY, relatedBy: .equal, toItem: leftField, attribute: .centerY, multiplier: 1, constant: 0), NSLayoutConstraint(item: textField, attribute: .leading, relatedBy: .equal, toItem: leftField, attribute: .trailing, multiplier: 1, constant: 15)])
         return textField
     }
 }

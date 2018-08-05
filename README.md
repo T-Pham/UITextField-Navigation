@@ -41,7 +41,7 @@
 
 UITextField-Navigation adds next, previous and done buttons to the keyboard for your `UITextField`s and `UITextView`s. It allows you to specify a next field either on the Interface Builder or programmatically. Then, you can access next and previous fields of each `UITextField` or `UITextView` easily.
 
-The UI is [**highly customizable**](#ui-customization).
+The UI is [**highly customizable**](#ui-customization). RTL languages are supported.
 
 To run the example project:
 

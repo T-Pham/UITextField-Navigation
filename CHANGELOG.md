@@ -54,3 +54,6 @@ Add global `Config` for setting button titles
 
 # v4.0.3
 Upgrade for Swift 4.1
+
+# v4.1
+RTL languages support

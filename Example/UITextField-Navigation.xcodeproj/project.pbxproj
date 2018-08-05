@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0A05702C8C6C00A3EDBA2C /* Pods_UITextField_Navigation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B736ED6C9C157E6EDEDA9E5 /* Pods_UITextField_Navigation_Tests.framework */; };
 		1B0176191D1EF71F00F38C56 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0176181D1EF71F00F38C56 /* ObjectiveCViewController.m */; };
 		1B07FA101D16EE770033E592 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B07FA0F1D16EE770033E592 /* .gitignore */; };
 		1B2A306B1D8C5383009779A2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2A306A1D8C5383009779A2 /* Quick.framework */; };
@@ -15,18 +16,18 @@
 		1BE2D27F1D2539580000E03E /* NavigationFieldDelegateFullImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D27E1D2539580000E03E /* NavigationFieldDelegateFullImplementation.swift */; };
 		1BE2D2811D2539700000E03E /* NavigationFieldDelegateEmptyImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D2801D2539700000E03E /* NavigationFieldDelegateEmptyImplementation.swift */; };
 		1BE2D2831D2539820000E03E /* MyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2D2821D2539820000E03E /* MyTextView.swift */; };
-		2851D663035171FF7DDAA308 /* libPods-UITextField-Navigation_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6B7C2758FBC5CC2764E019 /* libPods-UITextField-Navigation_Example.a */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* UITextField+NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* UITextField+NavigationTests.swift */; };
-		681D21DC0E93E4253913D2F8 /* libPods-UITextField_Navigation_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278666171FA033890FE578EC /* libPods-UITextField_Navigation_Tests.a */; };
+		9C8657F71D25EBC1262ADEC9 /* Pods_UITextField_Navigation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9072243EB80FBC985CF30173 /* Pods_UITextField_Navigation_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09199E30E5D5BDDFB8BBFF88 /* UITextField-Navigation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "UITextField-Navigation.podspec"; path = "../UITextField-Navigation.podspec"; sourceTree = "<group>"; };
+		0B736ED6C9C157E6EDEDA9E5 /* Pods_UITextField_Navigation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextField_Navigation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0176161D1EF71E00F38C56 /* UITextField-Navigation_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField-Navigation_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		1B0176171D1EF71F00F38C56 /* ObjectiveCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCViewController.h; sourceTree = "<group>"; };
 		1B0176181D1EF71F00F38C56 /* ObjectiveCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCViewController.m; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		1BE2D27E1D2539580000E03E /* NavigationFieldDelegateFullImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFieldDelegateFullImplementation.swift; sourceTree = "<group>"; };
 		1BE2D2801D2539700000E03E /* NavigationFieldDelegateEmptyImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFieldDelegateEmptyImplementation.swift; sourceTree = "<group>"; };
 		1BE2D2821D2539820000E03E /* MyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextView.swift; sourceTree = "<group>"; };
-		278666171FA033890FE578EC /* libPods-UITextField_Navigation_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UITextField_Navigation_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39ABC9A49F54AB19257732E4 /* Pods-UITextField_Navigation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField_Navigation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UITextField-Navigation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITextField-Navigation_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,10 +52,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* UITextField+NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+NavigationTests.swift"; sourceTree = "<group>"; };
 		68B2A3BE62371467C0CD0EF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		6C6B7C2758FBC5CC2764E019 /* libPods-UITextField-Navigation_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UITextField-Navigation_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7088DCBF300B77EA2394D245 /* Pods-UITextField-Navigation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField-Navigation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField-Navigation_Example/Pods-UITextField-Navigation_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9072243EB80FBC985CF30173 /* Pods_UITextField_Navigation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextField_Navigation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A944379C6F4C74E581ABED47 /* Pods-UITextField_Navigation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField_Navigation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C38AC293AA45DCF1A2439FEF /* Pods-UITextField-Navigation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextField-Navigation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITextField-Navigation_Example/Pods-UITextField-Navigation_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D64B208B2117672E002B68E1 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
 		ED54BC9C50B6C80A295F857B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2851D663035171FF7DDAA308 /* libPods-UITextField-Navigation_Example.a in Frameworks */,
+				9C8657F71D25EBC1262ADEC9 /* Pods_UITextField_Navigation_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2A306B1D8C5383009779A2 /* Quick.framework in Frameworks */,
-				681D21DC0E93E4253913D2F8 /* libPods-UITextField_Navigation_Tests.a in Frameworks */,
+				0C0A05702C8C6C00A3EDBA2C /* Pods_UITextField_Navigation_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				1B2A306A1D8C5383009779A2 /* Quick.framework */,
-				6C6B7C2758FBC5CC2764E019 /* libPods-UITextField-Navigation_Example.a */,
-				278666171FA033890FE578EC /* libPods-UITextField_Navigation_Tests.a */,
+				9072243EB80FBC985CF30173 /* Pods_UITextField_Navigation_Example.framework */,
+				0B736ED6C9C157E6EDEDA9E5 /* Pods_UITextField_Navigation_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +202,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				4A056984D750A979C626F9C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +221,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				B537C8FCB09BEF2C778FDA77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +313,44 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4A056984D750A979C626F9C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UITextField-Navigation_Example/Pods-UITextField-Navigation_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UITextField-Navigation/UITextField_Navigation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextField_Navigation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITextField-Navigation_Example/Pods-UITextField-Navigation_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B537C8FCB09BEF2C778FDA77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UITextField-Navigation/UITextField_Navigation.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextField_Navigation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITextField_Navigation_Tests/Pods-UITextField_Navigation_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FC41D15A5B52D678402FD0B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,6 +401,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				607FACDA1AFB9204008FA782 /* Base */,
+				D64B208B2117672E002B68E1 /* he */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -379,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -422,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -434,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -470,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

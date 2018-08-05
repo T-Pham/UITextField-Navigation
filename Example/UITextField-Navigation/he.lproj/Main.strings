@@ -1,0 +1,27 @@
+
+/* Class = "UITextField"; placeholder = "UITextField IB 1"; ObjectID = "Fub-gV-yWK"; */
+"Fub-gV-yWK.placeholder" = "UITextField IB 1";
+
+/* Class = "UITextField"; placeholder = "UITextField IB 1"; ObjectID = "IJf-AO-8cw"; */
+"IJf-AO-8cw.placeholder" = "UITextField IB 1";
+
+/* Class = "UIBarButtonItem"; title = "Objective-C"; ObjectID = "QTP-Se-Cbu"; */
+"QTP-Se-Cbu.title" = "Objective-C";
+
+/* Class = "UITextView"; text = "UITextView"; ObjectID = "S3A-rg-yuY"; */
+"S3A-rg-yuY.text" = "UITextView";
+
+/* Class = "UITextField"; placeholder = "UITextField IB 3"; ObjectID = "UDe-sO-4Mb"; */
+"UDe-sO-4Mb.placeholder" = "UITextField IB 3";
+
+/* Class = "UINavigationItem"; title = "Swift"; ObjectID = "WYM-AK-Zf8"; */
+"WYM-AK-Zf8.title" = "Swift";
+
+/* Class = "UINavigationItem"; title = "Objective-C"; ObjectID = "ZCX-56-FzT"; */
+"ZCX-56-FzT.title" = "Objective-C";
+
+/* Class = "UITextField"; placeholder = "UITextField IB 3"; ObjectID = "Zwe-IA-H66"; */
+"Zwe-IA-H66.placeholder" = "UITextField IB 3";
+
+/* Class = "UITextView"; text = "UITextView"; ObjectID = "cf2-gs-mCW"; */
+"cf2-gs-mCW.text" = "UITextView";

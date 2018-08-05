@@ -53,7 +53,7 @@
     textField.placeholder = placeholder;
     textField.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:textField];
-    [self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeWidth multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeCenterY multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeRight multiplier:1 constant:15]]];
+    [self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeWidth multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeCenterY multiplier:1 constant:0], [NSLayoutConstraint constraintWithItem:textField attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:leftField attribute:NSLayoutAttributeTrailing multiplier:1 constant:15]]];
     return textField;
 }
 
