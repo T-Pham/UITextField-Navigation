@@ -25,6 +25,16 @@
 		9C8657F71D25EBC1262ADEC9 /* Pods_UITextField_Navigation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9072243EB80FBC985CF30173 /* Pods_UITextField_Navigation_Example.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D6CD35602151636F00EF84D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = "UITextField-Navigation_Example";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		09199E30E5D5BDDFB8BBFF88 /* UITextField-Navigation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "UITextField-Navigation.podspec"; path = "../UITextField-Navigation.podspec"; sourceTree = "<group>"; };
 		0B736ED6C9C157E6EDEDA9E5 /* Pods_UITextField_Navigation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextField_Navigation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +236,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D6CD35612151636F00EF84D6 /* PBXTargetDependency */,
 			);
 			name = UITextField_Navigation_Tests;
 			productName = Tests;
@@ -244,11 +255,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -396,6 +407,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D6CD35612151636F00EF84D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* UITextField-Navigation_Example */;
+			targetProxy = D6CD35602151636F00EF84D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -535,7 +554,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UITextField-Navigation/UITextField-Navigation_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -551,7 +570,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UITextField-Navigation/UITextField-Navigation_Example-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -567,7 +586,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextField-Navigation_Example.app/UITextField-Navigation_Example";
 			};
 			name = Debug;
 		};
@@ -579,7 +599,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextField-Navigation_Example.app/UITextField-Navigation_Example";
 			};
 			name = Release;
 		};
