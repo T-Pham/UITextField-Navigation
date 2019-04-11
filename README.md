@@ -218,7 +218,7 @@ pod 'UITextField-Navigation'
 
 ## Compatibility
 
-- Swift 4: please use the latest version
+- Swift 4, 5: please use the latest version
 - Swift 3: please use version 3.0.0
 - Swift 2: please use version 1.4.3
 

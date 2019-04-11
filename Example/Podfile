@@ -8,5 +8,5 @@ end
 target 'UITextField_Navigation_Tests' do
     pod 'UITextField-Navigation', :path => '../'
 
-    pod 'Quick', '~> 1.2'
+    pod 'Quick', '2.0.0'
 end

@@ -57,3 +57,6 @@ Upgrade for Swift 4.1
 
 # v4.1
 RTL languages support
+
+# v4.2
+Upgrade for Swift 5

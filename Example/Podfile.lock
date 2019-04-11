@@ -1,9 +1,9 @@
 PODS:
-  - Quick (1.2.0)
-  - UITextField-Navigation (4.1)
+  - Quick (2.0.0)
+  - UITextField-Navigation (4.2)
 
 DEPENDENCIES:
-  - Quick (~> 1.2)
+  - Quick (= 2.0.0)
   - UITextField-Navigation (from `../`)
 
 SPEC REPOS:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  UITextField-Navigation: 1ad464d7abbc337d165d795718223e6395cf8dab
+  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
+  UITextField-Navigation: 25c2614b41096ade830fe015961dd2dbc4e108cb
 
-PODFILE CHECKSUM: 1d849b0569373f8bf1671ffda11a70d6d68013eb
+PODFILE CHECKSUM: 02dca4a1bc4eb41400a3961e25460dcc8a8dbc22
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0

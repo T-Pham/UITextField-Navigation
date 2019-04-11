@@ -18,6 +18,8 @@ public struct Config {
             return leftArrow
         case .rightToLeft:
             return rightArrow
+        @unknown default:
+            return "Previous"
         }
     }()
 
@@ -28,6 +30,8 @@ public struct Config {
             return rightArrow
         case .rightToLeft:
             return leftArrow
+        @unknown default:
+            return "Next"
         }
     }()
 
