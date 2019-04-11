@@ -1,4 +1,4 @@
-osx_image: xcode9
+osx_image: xcode10.2
 language: objective-c
 cache: cocoapods
 podfile: Example/Podfile
@@ -7,8 +7,7 @@ before_install:
 - pod repo update
 - pod install --project-directory=Example
 script:
-- open -b com.apple.iphonesimulator
-- xcodebuild -scheme UITextField_Navigation_Tests -workspace Example/UITextField-Navigation.xcworkspace -sdk iphonesimulator11.0 -destination 'platform=iOS Simulator,name=iPhone X,OS=11.0' build test | xcpretty
+- xcodebuild -scheme UITextField_Navigation_Tests -workspace Example/UITextField-Navigation.xcworkspace -sdk iphonesimulator11.0 -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2' build test | xcpretty
 - pod lib lint
 after_success:
 - bash <(curl -s https://codecov.io/bash) -J 'UITextField_Navigation'
