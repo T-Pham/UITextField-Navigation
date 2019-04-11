@@ -33,7 +33,6 @@
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
 
 [![CocoaPods](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
-[![CocoaPods downloads](https://img.shields.io/cocoapods/dt/UITextField-Navigation.svg?style=flat-square)](https://cocoapods.org/pods/UITextField-Navigation)
 
 [![Say thanks!](https://img.shields.io/badge/Say%20Thanks!-🦉-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/T-Pham)
 
