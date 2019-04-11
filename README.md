@@ -24,7 +24,7 @@
 [![CI Status](https://img.shields.io/travis/T-Pham/UITextField-Navigation/master.svg?style=flat-square)](https://travis-ci.org/T-Pham/UITextField-Navigation)
 [![GitHub issues](https://img.shields.io/github/issues/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://github.com/T-Pham/UITextField-Navigation/issues)
 [![Codecov](https://img.shields.io/codecov/c/github/T-Pham/UITextField-Navigation.svg?style=flat-square)](https://codecov.io/gh/T-Pham/UITextField-Navigation)
-[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/UITextField-Navigation.svg?style=flat-square)](http://cocoadocs.org/docsets/UITextField-Navigation)
+[![Documentation](https://img.shields.io/static/v1.svg?label=Documentation&message=✅&style=flat-square)](http://cocoadocs.org/docsets/UITextField-Navigation/3.0.0/)
 
 [![GitHub release](https://img.shields.io/github/tag/T-Pham/UITextField-Navigation.svg?style=flat-square&label=release)](https://github.com/T-Pham/UITextField-Navigation/releases)
 [![Platform](https://img.shields.io/cocoapods/p/UITextField-Navigation.svg?style=flat-square)](https://github.com/T-Pham/UITextField-Navigation)
