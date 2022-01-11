@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol NavigationFieldToolbarDelegate: class {
+protocol NavigationFieldToolbarDelegate: AnyObject {
 
     func navigationFieldToolbarDidTapPreviousButton(_ navigationFieldToolbar: NavigationFieldToolbar)
     func navigationFieldToolbarDidTapNextButton(_ navigationFieldToolbar: NavigationFieldToolbar)
